@@ -1,0 +1,52 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tutorial - Тэг - Kotanamy</title>
+        <link>https://kotanamy.github.io/tags/tutorial/</link>
+        <description>Tutorial - Тэг - Kotanamy</description>
+        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://kotanamy.github.io/tags/tutorial/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown для генератора статических сайтов</title>
+    <link>https://kotanamy.github.io/posts/markdown_tutorial/</link>
+    <pubDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/markdown_tutorial/</guid>
+    <description><![CDATA[Markdown для генератора статических сайтов Заголовки # H1## H2### H3#### H4##### H5###### H6 H1 H2 H3 H4 H5 H6 Выделение *Курсив* или _курсив_**Полужирный** или __полужирный__**Комбинированное _выделение_**~~Зачеркнутое~~ Курсив или курсив Полужирный или полужирный Комбинированное выделение Зачеркнутое Списки . в начале строки это пробел\n - переход на новую строку1. А2. Б..* Ненумерованный вложенный список 1. А...1. а...2. б2.]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 1</title>
+    <link>https://kotanamy.github.io/posts/swift_part_1/</link>
+    <pubDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_1/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 1 Стартовые понятия Swift 1. Предисловие То что вы читаете - это подобие туториалов для начинающих по языку Swift и IOS разработке. Понятие не имею зачем написал первые 5 туторов, для начинающих это будет скорее вредно, чем полезно, так что рекомендую начать с каких-нибудь курсов (например, swiftbook), а для матерых прогеров он не несет какой-то ценности.
+2. Константы и переменные Примечание: функция print() выводит входные аргументы на экран]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 2</title>
+    <link>https://kotanamy.github.io/posts/swift_part_2/</link>
+    <pubDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_2/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 2 Стартовые понятия Swift 4. Интерполяция строки Интерполяция строки - это когда вы хотите внутрь строки вставить константу или переменную
+let world = &#34;World&#34; let sd = &#34;Swift Developer&#34; let helloWorld = &#34;Hello \(world)or \(sd)&#34; // &#34;Hello World or Swift Developer&#34; 5. Типы коллекций Swift обеспечивает три основных типа коллекций - это массивы, множества и словари.
+5.1 Массивы
+Массив - это упорядоченная коллекция в которой могут содержатся переменные одного типа]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 3</title>
+    <link>https://kotanamy.github.io/posts/swift_part_3/</link>
+    <pubDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_3/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 3 Стартовые понятия Swift 6. Условные операторы 6.1 if
+Конструкция if проверяет истинность некоторого условия и в зависимости от результатов проверки выполняет отпределенный код
+Условия бывают:
+ if a != b if a &lt;= b if a &gt;= b if a &gt; b if a &lt; b if a ~= b // где a - диапазон  let a = 1 let b = 2 if(a == b){ print(&#34;а равно b&#34;) } else if(a &gt; b){ print(&#34;a больше b&#34;) } else { print(&#34;в другом случае&#34;) } // можно просто Bool подставить в условие let boolVal = true if boolVal { print(&#34;true&#34;) } else { print(&#34;false&#34;) } // условие с диапазоном if 1.]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 4</title>
+    <link>https://kotanamy.github.io/posts/swift_part_4/</link>
+    <pubDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_4/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 4 Стартовые понятия Swift 7. Циклы 7.1 Цикл for
+for i in 0...5 { print(i) } let arr = [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;] for i in arr{ print(i) } А со словарями следующая ситуация:
+let peopleAndViews = [&#34;Johe news&#34;: 712354, &#34;Marmok&#34;: 1410319312, &#34;Joma tech&#34;: 5013001] for (name, view) in peopleAndViews { print(&#34;Name: \(name)View: \(view)&#34;) } Найдем индекс и число которое делится на 2
+let arr = [10,20,3,78,41,1] for (index, value) in arr.]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Markdown для генератора статических сайтов - Kotanamy</title><meta name="Description" content="Markdown для генератора статических сайтов"><meta property="og:title" content="Markdown для генератора статических сайтов" />
+<meta property="og:description" content="Markdown для генератора статических сайтов" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/markdown_tutorial/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-10T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Markdown для генератора статических сайтов"/>
+<meta name="twitter:description" content="Markdown для генератора статических сайтов"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/markdown_tutorial/" /><link rel="prev" href="https://kotanamy.github.io/posts/swift_part_1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Markdown для генератора статических сайтов",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/markdown_tutorial\/"
+        },"genre": "posts","keywords": "Markdown, Tutorial","wordcount":  470 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/markdown_tutorial\/","datePublished": "2022-04-10T00:00:00+00:00","dateModified": "2022-04-10T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Markdown для генератора статических сайтов"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Markdown для генератора статических сайтов</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-10">2022-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;470 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#заголовки">Заголовки</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2">H2</a>
+      <ul>
+        <li><a href="#h3">H3</a></li>
+      </ul>
+    </li>
+    <li><a href="#выделение">Выделение</a></li>
+    <li><a href="#списки">Списки</a></li>
+    <li><a href="#список-дел-todolist-github-точно-умеет-в-такое">Список дел (ToDoList) (GitHub точно умеет в такое)</a></li>
+    <li><a href="#ссылки">Ссылки</a></li>
+    <li><a href="#изображение">Изображение</a></li>
+    <li><a href="#код-и-подсветка-синтаксиса">Код и подсветка синтаксиса</a></li>
+    <li><a href="#таблицы">Таблицы</a></li>
+    <li><a href="#цитаты">Цитаты</a></li>
+    <li><a href="#встроенный-html">Встроенный HTML</a></li>
+    <li><a href="#горизонтальные-линии">Горизонтальные линии</a></li>
+    <li><a href="#новая-строка">Новая строка</a></li>
+    <li><a href="#видео">Видео</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="markdown-для-генератора-статических-сайтов">Markdown для генератора статических сайтов</h1>
+<!-- raw HTML omitted -->
+<h2 id="заголовки">Заголовки</h2>
+<pre tabindex="0"><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+</code></pre><h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<!-- raw HTML omitted -->
+<h2 id="выделение">Выделение</h2>
+<pre tabindex="0"><code>*Курсив* или _курсив_
+**Полужирный** или __полужирный__
+**Комбинированное _выделение_**
+~~Зачеркнутое~~
+</code></pre><p><em>Курсив</em> или <em>курсив</em> <!-- raw HTML omitted -->
+<strong>Полужирный</strong> или <strong>полужирный</strong> <!-- raw HTML omitted -->
+<strong>Комбинированное <em>выделение</em></strong> <!-- raw HTML omitted -->
+<del>Зачеркнутое</del> <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<h2 id="списки">Списки</h2>
+<pre tabindex="0"><code>. в начале строки это пробел
+\n - переход на новую строку
+
+1. А
+2. Б
+..* Ненумерованный вложенный список 
+1. А
+...1. а
+...2. б
+2. Б
+\n
+...Абзац внутри списка
+\n
+...Lorem ipsum dorem Lorem ipsum dorem Lorem ipsum dorem
++ Ненумерованный список
+- Ненумерованный список
++ Ненумерованный список
+
+100. сотый
+.....- первый
+........- первый
+</code></pre><ol>
+<li>А</li>
+<li>Б</li>
+</ol>
+<ul>
+<li>Ненумерованный вложенный список</li>
+</ul>
+<ol>
+<li>
+<p>А</p>
+<ol>
+<li>а</li>
+<li>б</li>
+</ol>
+</li>
+<li>
+<p>Б</p>
+<p>Абзац внутри списка</p>
+<p>Lorem ipsum dorem Lorem ipsum dorem Lorem ipsum dorem</p>
+</li>
+</ol>
+<ul>
+<li>Ненумерованный список</li>
+</ul>
+<ul>
+<li>Ненумерованный список</li>
+</ul>
+<ul>
+<li>Ненумерованный список</li>
+</ul>
+<ol start="100">
+<li>сотый
+<ul>
+<li>первый
+<ul>
+<li>первый</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="список-дел-todolist-github-точно-умеет-в-такое">Список дел (ToDoList) (GitHub точно умеет в такое)</h2>
+<pre tabindex="0"><code>- [ ] таск 1
+- [x] таск 2
+- [ ] @github/support, отобразите пожалуйста мои таски
+</code></pre><ul>
+<li><i class="far fa-square fa-fw"></i> таск 1</li>
+<li><i class="far fa-check-square fa-fw"></i> таск 2</li>
+<li><i class="far fa-square fa-fw"></i> @github/support, отобразите пожалуйста мои таски</li>
+</ul>
+<p>@ - для указания [User]</p>
+<!-- raw HTML omitted -->
+<h2 id="ссылки">Ссылки</h2>
+<pre tabindex="0"><code>
+[Обычная ссылка](site.com)
+
+[Обычная ссылка c заголовком](site.com &#34;Site&#34;)
+
+[Ссылка со сноской][Текст]
+
+[Относительная ссылка](../myfolder/Readme.md) 
+
+[Для ссылок со сноской в виде цифры][1] 
+
+Ссылка в скобках [Тест ссылки] 
+
+Автоссылка: &lt;site.com&gt;
+
+Email: &lt;address@icloud.com&gt;
+
+Тут сноски:
+
+[Текст]: site.com
+
+[1]: site.com
+
+[Тест ссылки]: site.com
+</code></pre><p><a href="site.com" rel="">Обычная ссылка</a></p>
+<p><a href="site.com" title="Site" rel="">Обычная ссылка c заголовком</a></p>
+<p><a href="site.com" rel="">Ссылка со сноской</a></p>
+<p><a href="../myfolder/Readme.md" rel="">Относительная ссылка</a></p>
+<p><a href="site.com" rel="">Для ссылок со сноской в виде цифры</a></p>
+<p>Ссылка в скобках <a href="site.com" rel="">Тест ссылки</a></p>
+<p>Автоссылка: &lt;site.com&gt;</p>
+<p>Email: <a href="mailto:address@icloud.com" rel="">address@icloud.com</a></p>
+<p>Тут сноски:</p>
+<!-- raw HTML omitted -->
+<h2 id="изображение">Изображение</h2>
+<pre tabindex="0"><code>Внутки строки:
+![alt-текст](site.com/photo/img.png &#34;Тест заголовка логотипа 1&#34;)
+
+В сноске:
+![alt-текст][logo]
+
+[logo]: site.com/photo/img.png &#34;Тест заголовка логотипа 2&#34;
+</code></pre><p>Внутки строки:
+<figure><a class="lightgallery" href="site.com/photo/img.png" title="alt-текст" data-thumbnail="site.com/photo/img.png" data-sub-html="<h2>Тест заголовка логотипа 1</h2><p>alt-текст</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="site.com/photo/img.png"
+            data-srcset="site.com/photo/img.png, site.com/photo/img.png 1.5x, site.com/photo/img.png 2x"
+            data-sizes="auto"
+            alt="site.com/photo/img.png" />
+    </a><figcaption class="image-caption">Тест заголовка логотипа 1</figcaption>
+    </figure></p>
+<p>В сноске:
+<figure><a class="lightgallery" href="site.com/photo/img.png" title="alt-текст" data-thumbnail="site.com/photo/img.png" data-sub-html="<h2>Тест заголовка логотипа 2</h2><p>alt-текст</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="site.com/photo/img.png"
+            data-srcset="site.com/photo/img.png, site.com/photo/img.png 1.5x, site.com/photo/img.png 2x"
+            data-sizes="auto"
+            alt="site.com/photo/img.png" />
+    </a><figcaption class="image-caption">Тест заголовка логотипа 2</figcaption>
+    </figure></p>
+<p><!-- raw HTML omitted --></p>
+<h2 id="код-и-подсветка-синтаксиса">Код и подсветка синтаксиса</h2>
+<pre tabindex="0"><code>    Код:
+    `Код`
+
+    Блок кода БЕЗ подсветки:
+    ```
+    Блок кода
+    ```
+
+    С подсветкой синтаксиса:
+
+    ```swift
+    let val = &#34;Hello Swift&#34;
+    ```
+</code></pre><p>Код:
+<code>Код</code></p>
+<p>Блок кода БЕЗ подсветки:</p>
+<pre tabindex="0"><code>Блок кода
+</code></pre><p>С подсветкой синтаксиса:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">val</span> <span class="p">=</span> <span class="s">&#34;Hello Swift&#34;</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="таблицы">Таблицы</h2>
+<pre tabindex="0"><code>&lt;br&gt;
+| Таблица | Таблица | Таблица |
+|:--------|:-------:|--------:|
+| Лево    | Центр   | Право   |
+</code></pre><p>Собственно таблица:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Таблица</th>
+<th style="text-align:center">Таблица</th>
+<th style="text-align:right">Таблица</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Лево</td>
+<td style="text-align:center">Центр</td>
+<td style="text-align:right">Право</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="цитаты">Цитаты</h2>
+<pre tabindex="0"><code>&gt; Цитата
+&gt; Эта строка тоже относится к верхней цитате
+
+Разрыв
+
+&gt; Еще цитата
+</code></pre><blockquote>
+<p>Цитата
+Эта строка тоже относится к верхней цитате</p>
+</blockquote>
+<p>Разрыв</p>
+<blockquote>
+<p>Еще цитата</p>
+<blockquote>
+<p>Более глубокая цитата</p>
+<blockquote>
+<p>Еще глубже</p>
+</blockquote>
+</blockquote>
+<p>Цитата поверхностнее</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="встроенный-html">Встроенный HTML</h2>
+<pre tabindex="0"><code>&lt;dl&gt;
+    &lt;dt&gt; Слово &lt;/dt&gt;
+    &lt;dd&gt; Еще **слово**&lt;/dd&gt; &lt;!--- Marcdown уже не катит :D --&gt;
+&lt;/dl&gt;
+</code></pre><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="горизонтальные-линии">Горизонтальные линии</h2>
+<p>Три и более:</p>
+<pre tabindex="0"><code>Дефисы:
+
+--- 
+
+Звездочки:
+
+*** 
+
+Подчеркивания:
+
+___ 
+</code></pre><p>Дефисы:</p>
+<hr>
+<p>Звездочки:</p>
+<hr>
+<p>Подчеркивания:</p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="новая-строка">Новая строка</h2>
+<pre tabindex="0"><code>Для переноса на новую строку в конце предыдущей необходимо  
+добавить **два пробела**
+Это вот был `&lt;Enter&gt;`
+
+Это х2 `&lt;Enter&gt;`
+</code></pre><p>Для переноса на новую строку в конце предыдущей необходимо<br>
+добавить <strong>два пробела</strong>
+Это вот был <code>&lt;Enter&gt;</code></p>
+<p>Это х2 <code>&lt;Enter&gt;</code></p>
+<!-- raw HTML omitted -->
+<h2 id="видео">Видео</h2>
+<p>Ролик нельзя вставить напрямую, зато можно вставить изображение со ссылкой на ролик:</p>
+<pre tabindex="0"><code>&lt;a href=&#34;www.youtube.com/watch?feature=player_embedded&amp;v=ID_ВИДЕОРОЛИКА&#34; target=&#34;blank&#34;&gt; &lt;img src=&#34;http://img.youtube.com/vi/ID_ВИДЕОРОЛИКА/0.jpg&#34;&gt; alt=&#34;ALT-текст изображения&#34; width=&#34;800&#34; height=&#34;600&#34; border=&#34;10 /&gt; &lt;/a&gt;
+</code></pre></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-04-10</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/markdown/">Markdown</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swift_part_1/" class="prev" rel="prev" title="Road to IOS/Swift dev part 1"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 1</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

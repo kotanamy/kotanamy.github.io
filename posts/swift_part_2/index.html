@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 2 - Kotanamy</title><meta name="Description" content="Стартовые понятия Swift"><meta property="og:title" content="Road to IOS/Swift dev part 2" />
+<meta property="og:description" content="Стартовые понятия Swift" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/swift_part_2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-10T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 2"/>
+<meta name="twitter:description" content="Стартовые понятия Swift"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/swift_part_2/" /><link rel="prev" href="https://kotanamy.github.io/posts/swift_part_3/" /><link rel="next" href="https://kotanamy.github.io/posts/swift_part_1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 2",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_2\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  507 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_2\/","datePublished": "2022-04-10T00:00:00+00:00","dateModified": "2022-04-10T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия Swift"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-10">2022-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;507 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
+      <ul>
+        <li><a href="#4-интерполяция-строки">4. Интерполяция строки</a></li>
+        <li><a href="#5-типы-коллекций">5. Типы коллекций</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="road-to-iosswift-dev-part-2">Road to IOS/Swift dev part 2</h1>
+<h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
+<!-- raw HTML omitted -->
+<h3 id="4-интерполяция-строки">4. Интерполяция строки</h3>
+<p>Интерполяция строки - это когда вы хотите внутрь строки вставить константу или переменную</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">world</span> <span class="p">=</span> <span class="s">&#34;World&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">sd</span> <span class="p">=</span> <span class="s">&#34;Swift Developer&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">helloWorld</span> <span class="p">=</span> <span class="s">&#34;Hello </span><span class="si">\(</span><span class="n">world</span><span class="si">)</span><span class="s"> or </span><span class="si">\(</span><span class="n">sd</span><span class="si">)</span><span class="s">&#34;</span> <span class="c1">// &#34;Hello World or Swift Developer&#34;</span>
+</span></span></code></pre></div><h3 id="5-типы-коллекций">5. Типы коллекций</h3>
+<p>Swift обеспечивает три основных типа коллекций - это массивы, множества и словари.</p>
+<p>5.1 <strong>Массивы</strong></p>
+<p>Массив - это упорядоченная коллекция в которой могут содержатся переменные одного типа</p>
+<p>Объявление массива:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array</span> <span class="p">=</span> <span class="nb">Array</span><span class="p">&lt;</span><span class="nb">Int</span><span class="p">&gt;()</span> <span class="c1">// пустой массив</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array1</span> <span class="p">=</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]()</span> <span class="c1">// тоже пустой массив</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array2</span><span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span> <span class="c1">// тоже пустой массив</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array3</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c1">// а вот это НЕ пустой массив</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array4</span> <span class="p">=</span> <span class="p">[</span><span class="nb">Int</span><span class="p">](</span><span class="n">repeating</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="bp">count</span><span class="p">:</span> <span class="mi">6</span><span class="p">)</span> <span class="c1">// [10, 10, 10, 10, 10, 10]</span>
+</span></span></code></pre></div><p>Основные действия с массивами:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">array1</span> <span class="p">=</span> <span class="p">[</span><span class="nb">Int</span><span class="p">](</span><span class="n">repeating</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="bp">count</span><span class="p">:</span> <span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">array</span> <span class="o">+=</span> <span class="n">array1</span> <span class="c1">// array = [10, 10, 10, 10, 10, 10]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="mi">5</span> <span class="c1">// [10, 10, 5, 10, 10, 10]</span>
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">[</span><span class="mf">3.</span><span class="p">..</span><span class="mi">5</span><span class="p">]</span> <span class="p">=</span> <span class="mi">7</span> <span class="c1">// [10, 10, 5, 7, 7, 7]</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span> <span class="c1">// 6 (количество эл-тов в массиве)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1">// [10, 10, 5, 7, 7, 7, 100] добавили в конец 100</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span> <span class="c1">// 7</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="bp">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">at</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span> <span class="c1">// [10, 10, 5, 7, 1, 7, 100] вставили элемент на позицию 4</span>
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">at</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// [10, 10, 5, 1, 7, 100] удалили 3 элемент (возвращает значение)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="n">removeFirst</span><span class="p">()</span> <span class="c1">// [10, 5, 1, 7, 100] удалили 1ый элемент (возвращает значение)</span>
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="bp">removeLast</span><span class="p">()</span> <span class="c1">//  [10, 5, 1, 7] удалили последний элемент (возвращает значение)</span>
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="bp">reverse</span><span class="p">()</span> <span class="c1">// [7, 1, 5, 10] перевернули</span>
+</span></span></code></pre></div><p>5.2 Словари</p>
+<p>Словарь - это неупорядоченная коллекция в которой каждый элемент имеет ключ и значение</p>
+<p>Объявление словаря:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">dict</span> <span class="p">=</span> <span class="nb">Dictionary</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">,</span> <span class="nb">String</span><span class="p">&gt;()</span> <span class="c1">// создали словарь</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">dict2</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">String</span><span class="p">]()</span> <span class="c1">// еще одна форма записи</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">dict3</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">String</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:]</span> <span class="c1">// и еще одна форма записи</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">dogName</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Akita&#34;</span><span class="p">:</span> <span class="s">&#34;Victor&#34;</span><span class="p">,</span> <span class="s">&#34;Korgi&#34;</span><span class="p">:</span> <span class="s">&#34;Serega&#34;</span><span class="p">,</span> <span class="s">&#34;Taksa&#34;</span><span class="p">:</span> <span class="s">&#34;Den&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">dogName</span><span class="p">[</span><span class="s">&#34;Akita&#34;</span><span class="p">])</span> <span class="c1">// Victor</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">dogName</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span> <span class="c1">// 3</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">dogName</span><span class="p">.</span><span class="bp">isEmpty</span><span class="p">)</span> <span class="c1">// false</span>
+</span></span><span class="line"><span class="cl"><span class="n">dogName</span><span class="p">[</span><span class="s">&#34;Taksa&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Nikita&#34;</span> <span class="c1">// [&#34;Akita&#34;: &#34;Victor&#34;, &#34;Korgi&#34;: &#34;Serega&#34;, &#34;Taksa&#34;: &#34;Nikita&#34;]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">deleteDogName</span> <span class="p">=</span> <span class="n">dogName</span><span class="p">.</span><span class="n">updateValue</span><span class="p">(</span><span class="s">&#34;Aleksus&#34;</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">&#34;Korgi&#34;</span><span class="p">)</span> <span class="c1">// вернет перед обновлением</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dogName</span><span class="p">[</span><span class="s">&#34;Akita&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="kc">nil</span> <span class="c1">// Удалили Victor [&#34;Korgi&#34;: &#34;Serega&#34;, &#34;Taksa&#34;: &#34;Den&#34;]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">deleteDogName2</span> <span class="p">=</span> <span class="n">dogName</span><span class="p">.</span><span class="n">removeValue</span><span class="p">(</span><span class="n">forKey</span><span class="p">:</span> <span class="s">&#34;Taksa&#34;</span><span class="p">)</span> <span class="c1">// удалили и вернули значение &#34;Nikita&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//[&#34;Korgi&#34;: &#34;Serega&#34;]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Удаляем целиком словарь</span>
+</span></span><span class="line"><span class="cl"><span class="n">dogName</span><span class="p">.</span><span class="bp">removeAll</span><span class="p">()</span> <span class="c1">// или dogName = [:]</span>
+</span></span></code></pre></div><p>5.3 Множества</p>
+<p>Множество - это неупорядоченная коллекция уникальных значений</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">set1</span> <span class="p">=</span> <span class="n">Set</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">&gt;()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">set2</span><span class="p">:</span> <span class="n">Set</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">set3</span><span class="p">:</span> <span class="n">Set</span> <span class="p">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">set3</span><span class="p">.</span><span class="bp">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">// вставляем, вернет true, так как 10 нет в сете</span>
+</span></span><span class="line"><span class="cl"><span class="n">set3</span><span class="p">.</span><span class="bp">insert</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1">// вставляем, вернет false, так как 7 есть в сете</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">set3</span><span class="p">.</span><span class="bp">isEmpty</span><span class="p">)</span> <span class="c1">// false</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">set3</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span> <span class="c1">// 4</span>
+</span></span><span class="line"><span class="cl"><span class="n">set3</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1">// [8,9,10]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">set3</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1">// true (содержит ли)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">setOne</span><span class="p">:</span> <span class="n">Set</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">setTwo</span><span class="p">:</span> <span class="n">Set</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// объединили сеты и отсортировати по порядку</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">AllValueSet</span> <span class="p">=</span> <span class="n">setOne</span><span class="p">.</span><span class="n">union</span><span class="p">(</span><span class="n">setTwo</span><span class="p">).</span><span class="bp">sorted</span><span class="p">()</span> <span class="c1">// [1,2,3,4,5]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// пересечение сетов</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">valuesSet</span> <span class="p">=</span> <span class="n">setOne</span><span class="p">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">setTwo</span><span class="p">)</span> <span class="c1">// [3]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// все уникальные значение (те которые содержатся в одном, но не содержатся в другом)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">onlyNoDublicationValue</span> <span class="p">=</span> <span class="n">setOne</span><span class="p">.</span><span class="n">symmetricDifference</span><span class="p">(</span><span class="n">setTwo</span><span class="p">).</span><span class="bp">sorted</span><span class="p">()</span> <span class="c1">//  [1,2,4,5]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// все элементы первого сета, которые не повторяются во втором</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">substractedValArr</span> <span class="p">=</span> <span class="n">setOne</span><span class="p">.</span><span class="n">substracting</span><span class="p">(</span><span class="n">setTwo</span><span class="p">).</span><span class="bp">sorted</span><span class="p">()</span> <span class="c1">// [1,2]</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-04-10</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swift_part_3/" class="prev" rel="prev" title="Road to IOS/Swift dev part 3"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 3</a>
+            <a href="/posts/swift_part_1/" class="next" rel="next" title="Road to IOS/Swift dev part 1">Road to IOS/Swift dev part 1<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
