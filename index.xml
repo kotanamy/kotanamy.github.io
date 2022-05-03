@@ -3,9 +3,53 @@
         <title>Kotanamy</title>
         <link>https://kotanamy.github.io/</link>
         <description>Kotanamy</description>
-        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Tue, 03 May 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://kotanamy.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Road to IOS/Swift dev part 5</title>
+    <link>https://kotanamy.github.io/posts/swift_part_5/</link>
+    <pubDate>Tue, 03 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_5/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 5 Стартовые понятия Swift 8. Функции Функции - это самостоятельные фрагменты кода, решающие определенную задачу. Каждой функции присваивается уникальное имя, по которому ее можно идентифицировать и &ldquo;вызвать&rdquo; в нужный момент. Каждая функция в Swift имеет тип, описывающий тип параметров функции и тип возвращаемого значения. Тип функции можно использовать аналогично любым другим типам в Swift, т.е. одна функция может быть параметром другой функции либо ее результирующим значением.]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 6</title>
+    <link>https://kotanamy.github.io/posts/swift_part_6/</link>
+    <pubDate>Tue, 03 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_6/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 6 Стартовые понятия Swift 10. Кортежи (Tuples) Кортежи в Swift представляют набор значений, которые рассматриваются как один объект. Для создания кортежа используются скобки, внутри которых записываются все элементы кортежа.
+Simple:
+let one = 1 let two = 2 let three = 3 (one, two, three) // кортеж Вызов элемента кортежа:
+let boy = (5, &#34;Sergey&#34;) print(boy.0) print(boy.1) // Так же можно явно указать тип значений let cloneBoy: (Int, Strint) = (5, &#34;Sergey(Clone)&#34;) Присвоим нескольким константам несколько значений]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 7</title>
+    <link>https://kotanamy.github.io/posts/swift_part_7/</link>
+    <pubDate>Tue, 03 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_7/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 7 Стартовые понятия Swift 12. Классы (Class) 12.1 Первое знакомство с классами
+Класс - это план или шаблон для экземпляра класса. Экземпляр класса называется объект. Классы похожи на структуры, поэтому в статью про структуры я включу описание различий классов и структур.
+class Human { var name = &#34;Dimon&#34; // константы и переменные в классе называются свойствами var age: Int? = 30 // у девушек возраст спрашивать нельзя var hairs = true func description() -&gt; String { // функции в классе называют методами if let _age = age { // если вдруг женщина return &#34;Im \(name)and age = \(_age)&#34; } else { return &#34;Im \(name)and i woman&#34; } } } let humanOne = Human() // ссылка на объект типа Human humanOne - const humanOne.]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 8</title>
+    <link>https://kotanamy.github.io/posts/swift_part_8/</link>
+    <pubDate>Tue, 03 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_8/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 8 Стартовые понятия Swift 13. Вычисляемые свойства class Rectangular { let height: Int let width: Int let depth: Int var volume: Int { // вычисляемое свойство (объем) return height * width * depth } init(height: Int, width: Int, depth: Int){ self.height = height self.width = width self.depth = depth } } let rect = Rectangular(height: 2, width: 3, depth: 4) print(rect.volume) // 24 Герттеры и сеттеры]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 9</title>
+    <link>https://kotanamy.github.io/posts/swift_part_9/</link>
+    <pubDate>Tue, 03 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_9/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 9 Стартовые понятия Swift 15. Наблюдатели свойств(property observers) Наблюдатели свойств - это такие штуковины, которые наблюдают за изменениями значения свойств
+willSet - будет изменено
+didSet - было изменено
+Само значение изменяется где-то между willSet и didSet
+class SecretLabEmployee { var accessLevel = 0 { willSet { // неявно willSet(newValue) print(&#34;willSet&#34;) print(&#34;new access level = \(newValue)&#34;) } didSet { // неявно didSet(oldValue)  if accessLevel &gt; 0 { accessToDB = true } else { accessToDB = false } print(&#34;didSet, oldValue \(oldValue)&#34;) } } var accessToDB = false } let emp = SecretLabEmployee() emp.]]></description>
+</item><item>
     <title>Markdown для генератора статических сайтов</title>
     <link>https://kotanamy.github.io/posts/markdown_tutorial/</link>
     <pubDate>Sun, 10 Apr 2022 00:00:00 &#43;0000</pubDate>

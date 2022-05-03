@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 8 - Kotanamy</title><meta name="Description" content="Стартовые понятия Swift"><meta property="og:title" content="Road to IOS/Swift dev part 8" />
+<meta property="og:description" content="Стартовые понятия Swift" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/swift_part_8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-03T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 8"/>
+<meta name="twitter:description" content="Стартовые понятия Swift"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/swift_part_8/" /><link rel="prev" href="https://kotanamy.github.io/posts/swift_part_9/" /><link rel="next" href="https://kotanamy.github.io/posts/swift_part_7/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 8",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_8\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  865 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_8\/","datePublished": "2022-05-03T00:00:00+00:00","dateModified": "2022-05-03T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия Swift"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 8</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;865 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
+      <ul>
+        <li><a href="#13-вычисляемые-свойства">13. Вычисляемые свойства</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="road-to-iosswift-dev-part-8">Road to IOS/Swift dev part 8</h1>
+<h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
+<!-- raw HTML omitted -->
+<h3 id="13-вычисляемые-свойства">13. Вычисляемые свойства</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Rectangular</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">height</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">width</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">depth</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">volume</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span> <span class="c1">// вычисляемое свойство (объем)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">height</span> <span class="o">*</span> <span class="n">width</span> <span class="o">*</span> <span class="n">depth</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">height</span> <span class="p">=</span> <span class="n">height</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">width</span> <span class="p">=</span> <span class="n">width</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">depth</span> <span class="p">=</span> <span class="n">depth</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">rect</span> <span class="p">=</span> <span class="n">Rectangular</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">rect</span><span class="p">.</span><span class="n">volume</span><span class="p">)</span> <span class="c1">// 24</span>
+</span></span></code></pre></div><p>Герттеры и сеттеры</p>
+<p>get - возвращает значение</p>
+<p>set - устанавливает значение</p>
+<p>Сразу примерчик</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Еще немного инфы на примерчике</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">secondName</span><span class="p">:</span> <span class="nb">String</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span> <span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">secondName</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">secondName</span> <span class="p">=</span> <span class="n">secondName</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">fullName</span><span class="p">:</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">get</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&#34; &#34;</span> <span class="o">+</span> <span class="n">secondName</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">set</span><span class="p">(</span><span class="n">anotherNewValue</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// по дефолту идет newValue, мы переопределяем на anotherNewValue</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">array</span> <span class="p">=</span> <span class="n">anotherNewValue</span><span class="p">.</span><span class="n">components</span><span class="p">(</span><span class="n">separatedBy</span><span class="p">:</span> <span class="s">&#34; &#34;</span><span class="p">)</span> <span class="c1">// функция которая разбивает строку на массив элементов (по пробелу ориентируется)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">name</span> <span class="p">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">secondName</span> <span class="p">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;Name&#34;</span><span class="p">,</span> <span class="n">secondName</span><span class="p">:</span> <span class="s">&#34;secondName&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">fullName</span><span class="p">)</span> <span class="c1">// Name secondName</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">person</span><span class="p">.</span><span class="n">fullName</span> <span class="p">=</span> <span class="s">&#34;Utka Duck&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Utka</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">secondName</span><span class="p">)</span> <span class="c1">// Duck</span>
+</span></span></code></pre></div><ol start="14">
+<li>Свойства класса(Class properties)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Car</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// properties</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">products</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">people</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">pets</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">class</span> <span class="nc">var</span> <span class="n">selfWeight</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1500</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">class</span> <span class="nc">var</span> <span class="n">maxWeight</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">2000</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// computed property</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">totalWeight</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">products</span> <span class="o">+</span> <span class="n">people</span> <span class="o">+</span> <span class="n">pets</span> <span class="o">+</span> <span class="n">Car</span><span class="p">.</span><span class="n">selfWeight</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Init</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">products</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">pets</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">products</span> <span class="p">=</span> <span class="n">products</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">people</span> <span class="p">=</span> <span class="n">people</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">pets</span> <span class="p">=</span> <span class="n">pets</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">car</span> <span class="p">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">products</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="n">pets</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="n">totalWight</span><span class="p">)</span> <span class="c1">// 1880</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">maxWeight</span> <span class="p">=</span> <span class="n">Car</span><span class="p">.</span><span class="n">maxWeight</span> <span class="c1">// вызываем свойство КЛАССА, а НЕ объекта</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">carWeight</span> <span class="p">=</span> <span class="n">Car</span><span class="p">.</span><span class="n">selfWeight</span> <span class="c1">// то же самое</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">totalWeight</span> <span class="p">=</span> <span class="n">car</span><span class="p">.</span><span class="n">totalWeight</span> <span class="c1">// car с маленькой буквы, это ОБЪЕКТ</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">maxWeight</span> <span class="o">&lt;</span> <span class="n">totalWeight</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;All ok&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Not ok&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>14.2 <strong>class func</strong> и <strong>static func</strong></p>
+<p>Модификаторы static и class позволяют нам &ldquo;прикрепить&rdquo; методы к классу, а не к экземплярам класса. <strong>class func</strong> и <strong>static func</strong> (то же самое что и <strong>final class func</strong>) все же имеют различия, вот на примерчике рассмотрим:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">A</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">class</span> <span class="nc">func</span> <span class="n">f1</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;f1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">f2</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;f2&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Функцию f2() можно также объявить как:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// final class func f2() -&gt; String {</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     return &#34;f2&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// }</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// итого, наследуем</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">B</span> <span class="p">:</span> <span class="n">A</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">class</span> <span class="nc">func</span> <span class="n">f1</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;f1 from B&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// а вот это уже работать не будет, так как</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// модификатор final говорит о том, что</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// эту функцию нельзя переопределять в </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// классах наследниках</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">f2</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;f2 from B&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>14.3 Ленивые свойства (lazy properties)</p>
+<p>Ленивое свойство - не инициализируется до момента обращения к нему</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Предположим что эта очень ресурсозатратная</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">bigDataProcessingFunc</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s">&#34;Im very big and very strong process, HAHA&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Processing</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">smallDataProcessing</span> <span class="p">=</span> <span class="s">&#34;Im small process&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">averageDataProcessing</span> <span class="p">=</span> <span class="s">&#34;Average data processing&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">bigDataProcessing</span> <span class="p">=</span> <span class="n">bigDataProcessingFunc</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">OptimizedProcessing</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">smallDataProcessing</span> <span class="p">=</span> <span class="s">&#34;Im small process&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">averageDataProcessing</span> <span class="p">=</span> <span class="s">&#34;Average data processing&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ленивое свойство и let -&gt; var, </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// так как let не даст поменять значение переменной</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">lazy</span> <span class="kd">var</span> <span class="nv">bigDataProcessing</span> <span class="p">=</span> <span class="n">bigDataProcessingFunc</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// инициализирует все 3 свойства сразу</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">processing</span> <span class="p">=</span> <span class="n">Processing</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// инициализирует сразу только 2 свойсва</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">optimizedProcessing</span> <span class="p">=</span> <span class="n">OptimizedProcessing</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// вот тут мы обращаемся к свойству</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// и оно инициализируется</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ммм, ляпота ^_^</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">optimizedProcessing</span><span class="p">.</span><span class="n">bigDataProcessing</span><span class="p">)</span> 
+</span></span></code></pre></div><p>14.4 Уровни доступа (access level)</p>
+<p>Уровни доступа нужны для того чтобы ограничить область видимости метода или свойства, или инкапсулировать (спрятать) реализацию метода или свойства.</p>
+<p>Уровни доступа:</p>
+<ol>
+<li>Открытый доступ (open access) - с таким уровнем доступа можно наследовать, переопределять члены класса. Также можно это делать в другом модуле который импортирует тот модуль, в котором вы определили этот класс</li>
+<li>Публичный доступ (public access) - с таким уровнем доступа можно наследовать, переопределять члены класса внутри одного модуля</li>
+<li>Внутренний (internal access) - Этот уровень доступа позволяет использовать объекты внутри любого исходного файла из их определяющего модуля, но не (по умолчанию)</li>
+<li>Файл-приватный (file private access) - позволяет использовать объект в пределах его исходного файла</li>
+<li>Приватный (private access) - запрещает использовать методы или свойства которые вы создали внутри класса\структуры\перечесления вне класса\структуры\перечесления</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Файл 1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">SomeClass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">property</span> <span class="p">=</span> <span class="kc">true</span> <span class="c1">// property</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fileprivate</span> <span class="kd">let</span> <span class="nv">anotherProperty</span> <span class="p">=</span> <span class="kc">false</span> <span class="c1">// anotherProperty</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">printPandAP</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="n">property</span><span class="p">)</span> <span class="c1">// можно</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="n">anotherProperty</span><span class="p">)</span> <span class="c1">// тоже можно</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// это расширение класса</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// считайте это просто частью класса SomeClass</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// подробнее будет в следующих статьях</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">SomeClass</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">someAP</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">anotherProperty</span> <span class="p">?</span> <span class="k">return</span> <span class="mi">20</span> <span class="p">:</span> <span class="k">return</span> <span class="mi">1</span> <span class="c1">// вызвать anotherProperty позволено в разширениях</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// так нельзя, так как private</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// var someP: Int {</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//    property ? return 10 : return 0</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// }</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">AnotherClass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">someClass</span> <span class="p">=</span> <span class="n">SomeClass</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">someFunc</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// все ок, fileprivate свойство</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// можно вызвать в другом классе в том же файле</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="n">someClass</span><span class="p">.</span><span class="n">anotherProperty</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// вызов print(someClass.property) выдаст ошибку</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// потому что уровень доступа не позволяет</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// вызывать свойство вне класса</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Файл 2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">SomeClass</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1">// это работать не будет, так как в другом файле</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">someAPinFile2</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">anotherProperty</span> <span class="p">?</span> <span class="k">return</span> <span class="mi">20</span> <span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-05-03</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swift_part_9/" class="prev" rel="prev" title="Road to IOS/Swift dev part 9"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 9</a>
+            <a href="/posts/swift_part_7/" class="next" rel="next" title="Road to IOS/Swift dev part 7">Road to IOS/Swift dev part 7<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

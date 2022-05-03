@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 7 - Kotanamy</title><meta name="Description" content="Стартовые понятия Swift"><meta property="og:title" content="Road to IOS/Swift dev part 7" />
+<meta property="og:description" content="Стартовые понятия Swift" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/swift_part_7/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-03T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 7"/>
+<meta name="twitter:description" content="Стартовые понятия Swift"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/swift_part_7/" /><link rel="prev" href="https://kotanamy.github.io/posts/swift_part_8/" /><link rel="next" href="https://kotanamy.github.io/posts/swift_part_6/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 7",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_7\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  439 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_7\/","datePublished": "2022-05-03T00:00:00+00:00","dateModified": "2022-05-03T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия Swift"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 7</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;439 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
+      <ul>
+        <li><a href="#12-классы-class">12. Классы (Class)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="road-to-iosswift-dev-part-7">Road to IOS/Swift dev part 7</h1>
+<h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
+<!-- raw HTML omitted -->
+<h3 id="12-классы-class">12. Классы (Class)</h3>
+<p>12.1 Первое знакомство с классами</p>
+<p>Класс - это план или шаблон для экземпляра класса. Экземпляр класса называется объект. Классы похожи на структуры, поэтому в статью про структуры я включу описание различий классов и структур.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Human</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">&#34;Dimon&#34;</span> <span class="c1">// константы и переменные в классе называются свойствами</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">age</span><span class="p">:</span> <span class="nb">Int</span><span class="p">?</span> <span class="p">=</span> <span class="mi">30</span> <span class="c1">// у девушек возраст спрашивать нельзя</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">hairs</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">description</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span> <span class="c1">// функции в классе называют методами</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">_age</span> <span class="p">=</span> <span class="n">age</span> <span class="p">{</span> <span class="c1">// если вдруг женщина</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s">&#34;Im </span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s"> and age = </span><span class="si">\(</span><span class="n">_age</span><span class="si">)</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s">&#34;Im </span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s"> and i woman&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">humanOne</span> <span class="p">=</span> <span class="n">Human</span><span class="p">()</span> <span class="c1">// ссылка на объект типа Human humanOne - const</span>
+</span></span><span class="line"><span class="cl"><span class="n">humanOne</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Natasha&#34;</span> <span class="c1">// так можно</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">humanOne</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">humanOne</span><span class="p">.</span><span class="n">description</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">h2</span> <span class="p">=</span> <span class="n">Human</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">h2</span><span class="p">.</span><span class="n">hairs</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="n">h2</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#34;John&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">array</span> <span class="p">=</span> <span class="p">[</span><span class="n">Human</span><span class="p">]()</span>
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">humanOne</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Попросим рассказать людей о себе</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">p</span> <span class="k">in</span> <span class="n">array</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="p">.</span><span class="n">description</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>12.2 Инициализаторы</p>
+<p>Инициализаторы нужны для инициализации объекта класса (Спасибо, капитан)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Petuh</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">id</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span> 
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">age</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">id</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Petuh&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="mi">0</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">coCo</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Co-Co and kudah, </span><span class="si">\(</span><span class="n">id</span><span class="si">)</span><span class="s"> _ </span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s"> _ age: </span><span class="si">\(</span><span class="n">age</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">p1</span> <span class="p">=</span> <span class="n">Petuh</span><span class="p">()</span> <span class="c1">// инициализатор без параметров</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">p2</span> <span class="p">=</span> <span class="n">Petuh</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">&#34;Kukish&#34;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// инициализатор с параметрами</span>
+</span></span><span class="line"><span class="cl"><span class="n">p1</span><span class="p">.</span><span class="n">coCo</span><span class="p">()</span> <span class="c1">// Co-Co and kudah 0 _ Petuh 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">p2</span><span class="p">.</span><span class="n">coCo</span><span class="p">()</span> <span class="c1">// Co-Co and kudah 1 _ Kukish 2</span>
+</span></span></code></pre></div><p>12.3 Наследование</p>
+<p>Классы в Swift могут вызывать или получать доступ к методам, свойствам, индексам, принаджелащим их суперклассам и могут предоставлять свои собственные переписанные версии этих методов, свойств, индексов для усовершенствования или изменения их поведения.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Базовый класс/суперкласс/родительский класс</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Chicken</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Petuh&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">coCo</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;Co-Co and kudah, </span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// класс наследник</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Petuh</span><span class="p">:</span> <span class="n">Chicken</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">egg</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">egg</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// можно здесь вызвать</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// инициализатор базового класса</span>
+</span></span><span class="line"><span class="cl">         <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="kc">self</span><span class="p">.</span><span class="n">egg</span> <span class="p">=</span> <span class="n">egg</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">egg</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">coCo</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span> <span class="c1">// override - переопределяем функцию базового класса</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">originalText</span> <span class="p">=</span> <span class="kc">super</span><span class="p">.</span><span class="n">coCo</span><span class="p">()</span> <span class="c1">// super - метод базового класса</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">originalText</span> <span class="o">+</span> <span class="s">&#34; I have a </span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">egg</span><span class="si">)</span><span class="s"> egg&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">petuh</span> <span class="p">=</span> <span class="n">Petuh</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;Petuch&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">petuh</span><span class="p">.</span><span class="n">coCo</span><span class="p">())</span> <span class="c1">// Co-Co and kudah, Petuch I have a 1 egg</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">petuh1</span> <span class="p">=</span> <span class="n">Petuh</span><span class="p">(</span><span class="n">egg</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span> <span class="s">&#34;Petuch1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">petuh1</span><span class="p">.</span><span class="n">coCo</span><span class="p">())</span> <span class="c1">// Co-Co and kudah, Petuch1 I have a 2 egg</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-05-03</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swift_part_8/" class="prev" rel="prev" title="Road to IOS/Swift dev part 8"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 8</a>
+            <a href="/posts/swift_part_6/" class="next" rel="next" title="Road to IOS/Swift dev part 6">Road to IOS/Swift dev part 6<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
