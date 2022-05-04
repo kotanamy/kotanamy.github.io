@@ -3,9 +3,20 @@
         <title>Kotanamy</title>
         <link>https://kotanamy.github.io/</link>
         <description>Kotanamy</description>
-        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Tue, 03 May 2022 00:00:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Wed, 04 May 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://kotanamy.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Road to IOS/Swift dev part 9</title>
+    <link>https://kotanamy.github.io/posts/swift_part_9/</link>
+    <pubDate>Wed, 04 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_9/</guid>
+    <description><![CDATA[Road to IOS/Swift dev part 9 Стартовые понятия Swift 15. Наблюдатели свойств(property observers) Наблюдатели свойств - это такие штуковины, которые наблюдают за изменениями значения свойств
+willSet - будет изменено
+didSet - было изменено
+Само значение изменяется где-то между willSet и didSet
+class SecretLabEmployee { var accessLevel = 0 { willSet { // неявно willSet(newValue) print(&#34;willSet&#34;) print(&#34;new access level = \(newValue)&#34;) } didSet { // неявно didSet(oldValue)  if accessLevel &gt; 0 { accessToDB = true } else { accessToDB = false } print(&#34;didSet, oldValue \(oldValue)&#34;) } } var accessToDB = false } let emp = SecretLabEmployee() emp.]]></description>
+</item><item>
     <title>Road to IOS/Swift dev part 8</title>
     <link>https://kotanamy.github.io/posts/swift_part_8/</link>
     <pubDate>Tue, 03 May 2022 00:00:00 &#43;0000</pubDate>
