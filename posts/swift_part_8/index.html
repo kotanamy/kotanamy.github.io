@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_8\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  865 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  873 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_8\/","datePublished": "2022-05-03T00:00:00+00:00","dateModified": "2022-05-03T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 8</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;865 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;873 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -89,11 +89,13 @@
     <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
       <ul>
         <li><a href="#13-вычисляемые-свойства">13. Вычисляемые свойства</a></li>
+        <li><a href="#14-свойства-классаclass-properties">14. Свойства класса(Class properties)</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="road-to-iosswift-dev-part-8">Road to IOS/Swift dev part 8</h1>
+            </div><div class="content" id="content"><p>Стартовые понятия Swift. Вычисляемые свойства, cвойства класса.</p>
+<h1 id="road-to-iosswift-dev-part-8">Road to IOS/Swift dev part 8</h1>
 <h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
 <!-- raw HTML omitted -->
 <h3 id="13-вычисляемые-свойства">13. Вычисляемые свойства</h3>
@@ -147,9 +149,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">person</span><span class="p">.</span><span class="n">fullName</span> <span class="p">=</span> <span class="s">&#34;Utka Duck&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Utka</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">secondName</span><span class="p">)</span> <span class="c1">// Duck</span>
-</span></span></code></pre></div><ol start="14">
-<li>Свойства класса(Class properties)</li>
-</ol>
+</span></span></code></pre></div><h3 id="14-свойства-классаclass-properties">14. Свойства класса(Class properties)</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Car</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// properties</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">products</span><span class="p">:</span> <span class="nb">Int</span>
@@ -183,7 +183,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Not ok&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>14.2 <strong>class func</strong> и <strong>static func</strong></p>
+</span></span></code></pre></div><h4 id="142-class-func-и-static-func">14.2 <strong>class func</strong> и <strong>static func</strong></h4>
 <p>Модификаторы static и class позволяют нам &ldquo;прикрепить&rdquo; методы к классу, а не к экземплярам класса. <strong>class func</strong> и <strong>static func</strong> (то же самое что и <strong>final class func</strong>) все же имеют различия, вот на примерчике рассмотрим:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">A</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">class</span> <span class="nc">func</span> <span class="n">f1</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
@@ -216,7 +216,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;f2 from B&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>14.3 Ленивые свойства (lazy properties)</p>
+</span></span></code></pre></div><h4 id="143-ленивые-свойства-lazy-properties">14.3 Ленивые свойства (lazy properties)</h4>
 <p>Ленивое свойство - не инициализируется до момента обращения к нему</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Предположим что эта очень ресурсозатратная</span>
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">bigDataProcessingFunc</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
@@ -246,7 +246,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// и оно инициализируется</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// ммм, ляпота ^_^</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">optimizedProcessing</span><span class="p">.</span><span class="n">bigDataProcessing</span><span class="p">)</span> 
-</span></span></code></pre></div><p>14.4 Уровни доступа (access level)</p>
+</span></span></code></pre></div><h4 id="144-уровни-доступа-access-level">14.4 Уровни доступа (access level)</h4>
 <p>Уровни доступа нужны для того чтобы ограничить область видимости метода или свойства, или инкапсулировать (спрятать) реализацию метода или свойства.</p>
 <p>Уровни доступа:</p>
 <ol>

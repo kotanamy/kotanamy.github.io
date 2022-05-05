@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_5\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  692 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  697 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_5\/","datePublished": "2022-04-29T00:00:00+00:00","dateModified": "2022-04-29T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 5</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-29">2022-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;692 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-29">2022-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;697 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -94,39 +94,40 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="road-to-iosswift-dev-part-5">Road to IOS/Swift dev part 5</h1>
+            </div><div class="content" id="content"><p>Стартовые понятия Swift. Функции, замыкания.</p>
+<h1 id="road-to-iosswift-dev-part-5">Road to IOS/Swift dev part 5</h1>
 <h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
 <!-- raw HTML omitted -->
 <h3 id="8-функции">8. Функции</h3>
 <p>Функции - это самостоятельные фрагменты кода, решающие определенную задачу. Каждой функции присваивается уникальное имя, по которому ее можно идентифицировать и &ldquo;вызвать&rdquo; в нужный момент. Каждая функция в Swift имеет тип, описывающий тип параметров функции и тип возвращаемого значения. Тип функции можно использовать аналогично любым другим типам в Swift, т.е. одна функция может быть параметром другой функции либо ее результирующим значением. Функции также могут вкладываться друг в друга, что позволяет икапсулировать определенный алгоритм внутри локального контекста.</p>
-<p>8.1. Проставя функция, ничего не принимающая и ничего не возвращающая</p>
+<h4 id="81-простая-функция-ничего-не-принимающая-и-ничего-не-возвращающая">8.1. Простая функция, ничего не принимающая и ничего не возвращающая</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">simpleFunc</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// еще можно вот так: func simpleFunc() -&gt; Void{} или func simpleFunc(){}</span>
 </span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Im func&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">simpleFunc</span><span class="p">()</span> <span class="c1">// вызываем, выведе &#34;Im func&#34;</span>
-</span></span></code></pre></div><p>8.2. Функция, принимающая один параметр</p>
+</span></span></code></pre></div><h4 id="82-функция-принимающая-один-параметр">8.2. Функция, принимающая один параметр</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">oneParam</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="o">++</span>
 </span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">oneParam</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// 11</span>
-</span></span></code></pre></div><p>8.3. Функция, не принимающая параметров, но возвращающая значение</p>
+</span></span></code></pre></div><h4 id="83-функция-не-принимающая-параметров-но-возвращающая-значение">8.3. Функция, не принимающая параметров, но возвращающая значение</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">noParam</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">10</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="n">noParam</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">// 10</span>
-</span></span></code></pre></div><p>8.4. Функция, принимающая несколько параметров и возвращающая значение</p>
+</span></span></code></pre></div><h4 id="84-функция-принимающая-несколько-параметров-и-возвращающая-значение">8.4. Функция, принимающая несколько параметров и возвращающая значение</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">twoParam</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">{</span> <span class="c1">// сложение (функция &#34;add&#34;, так сказать)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">c</span> <span class="p">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">// 3</span>
-</span></span></code></pre></div><p>8.5. Функция, принимающая массив в качестве параметра и использующая вложенную функцию для работы</p>
+</span></span></code></pre></div><h4 id="85-функция-принимающая-массив-в-качестве-параметра-и-использующая-вложенную-функцию-для-работы">8.5. Функция, принимающая массив в качестве параметра и использующая вложенную функцию для работы</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// название не каноничное (плохое), придерживаюсь общей концепции, назвал бы arrayCounter</span>
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">arrayParam</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">{</span> <span class="c1">// считает количество элементов массив</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">sum</span> <span class="p">=</span> <span class="mi">0</span>
@@ -140,7 +141,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="n">arrayParam</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">// 15</span>
-</span></span></code></pre></div><p>8.6. Функция, которая принимает переменное число параметров</p>
+</span></span></code></pre></div><h4 id="86-функция-которая-принимает-переменное-число-параметров">8.6. Функция, которая принимает переменное число параметров</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">moreParam</span><span class="p">(</span><span class="n">ofInt</span> <span class="n">integers</span><span class="p">:</span> <span class="nb">Int</span><span class="p">...)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span> <span class="c1">// ofInt - внешнее имя, используется ниже</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">sum</span> <span class="p">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
@@ -153,11 +154,11 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="n">moreParam</span><span class="p">(</span><span class="n">ofInt</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">// ниже - это вот ТУТ (^w^)</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">// 15</span>
-</span></span></code></pre></div><p>8.7. Имена параметров функции</p>
+</span></span></code></pre></div><h4 id="87-имена-параметров-функции">8.7. Имена параметров функции</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">nameParam</span><span class="p">(</span><span class="kc">_</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span> <span class="c1">// _ - значит что параметр можно пропустить</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">7</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>8.8. Функция в качестве возвращаемого значения</p>
+</span></span></code></pre></div><h4 id="88-функция-в-качестве-возвращаемого-значения">8.8. Функция в качестве возвращаемого значения</h4>
 <p>Ща будет огонь, но попробую разжевать супер подробно</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Функция принимает Bool, а возвращает функцию (Int) -&gt; Int</span>
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">WAT</span><span class="p">(</span><span class="n">missed</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">((</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span> 
