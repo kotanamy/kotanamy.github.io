@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 12 - Kotanamy</title><meta name="Description" content="Стартовые понятия Swift"><meta property="og:title" content="Road to IOS/Swift dev part 12" />
+<meta property="og:description" content="Стартовые понятия Swift" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/swift_part_12/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 12"/>
+<meta name="twitter:description" content="Стартовые понятия Swift"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/swift_part_12/" /><link rel="prev" href="https://kotanamy.github.io/posts/swift_part_11/" /><link rel="next" href="https://kotanamy.github.io/posts/swift_part_13/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 12",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_12\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  414 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_12\/","datePublished": "2022-05-23T00:00:00+00:00","dateModified": "2022-05-23T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия Swift"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 12</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-23">2022-05-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;414 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
+      <ul>
+        <li><a href="#21-автоматический-подсчет-ссылокarc-automatic-reference-counting">21. Автоматический подсчет ссылок(ARC (Automatic Reference Counting))</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Стартовые понятия Swift. Автоматический подсчет ссылок.</p>
+<h1 id="road-to-iosswift-dev-part-12">Road to IOS/Swift dev part 12</h1>
+<h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
+<!-- raw HTML omitted -->
+<h3 id="21-автоматический-подсчет-ссылокarc-automatic-reference-counting">21. Автоматический подсчет ссылок(ARC (Automatic Reference Counting))</h3>
+<p><strong>ARC</strong> служит для отслеживания и управления памятью приложения.</p>
+<ul>
+<li>
+<p><strong>weak</strong> - слабый захват ссылок, не удерживается замыканием и может быть освобожден и установлен в nil (Всегда optional)</p>
+</li>
+<li>
+<p><strong>unowned</strong> - &ldquo;бесхозные ссылки&rdquo;, альтернатива weak, разница в том, что НЕ является optional.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">dog</span><span class="p">:</span> <span class="n">Dog</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">deinit</span> <span class="p">{</span> <span class="c1">// деинициализатор (деструктор) вызывается когда высвобождается память объекта</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Deinit Person&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Dog</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">person</span><span class="p">:</span> <span class="n">Person</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">deinit</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Deinit Dog&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// области видимости</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">firstScope</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">secondScope</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">firstScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">secondScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">dog</span> <span class="p">=</span> <span class="n">Dog</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;second end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;first end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Выведет:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// second end</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit Dog</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit Person</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// first end</span>
+</span></span></code></pre></div><p>Даем перекрестные ссылки</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Продолжаем</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">firstScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">secondScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">dog</span> <span class="p">=</span> <span class="n">Dog</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">person</span><span class="p">.</span><span class="n">dog</span> <span class="p">=</span> <span class="n">dog</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dog</span><span class="p">.</span><span class="n">person</span> <span class="p">=</span> <span class="n">person</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;second end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;first end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Выведет:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// second end</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// first end</span>
+</span></span></code></pre></div><p>Память не высвободилась, так как ARC видит что на объект кто-то ссылается, а значит он еще нужен. Т.е. объект отпускается только в том случае, если колечество сильных ссылок равно нулю. Чтобы поправить ситуацию есть операторы weak и unowned. Напишем новый класс WeakPerson.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Продолжаем</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">WeakPerson</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">dog</span><span class="p">:</span> <span class="n">Dog</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">deinit</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Deinit WeakPerson&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">firstScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">weakPerson</span> <span class="p">=</span> <span class="n">WeakPerson</span><span class="p">()</span> <span class="c1">// еще в этом примере поиграем </span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">dog</span> <span class="p">=</span> <span class="n">Dog</span><span class="p">()</span>              <span class="c1">// в первой области видимости</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">secondScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">weakPerson</span><span class="p">.</span><span class="n">dog</span> <span class="p">=</span> <span class="n">dog</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dog</span><span class="p">.</span><span class="n">person</span> <span class="p">=</span> <span class="n">weakPerson</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;second end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;first end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="c1">// после завершения второй области видимости</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// освободится память, т.е. туть</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Выведет:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// second end</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// first end</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit Dog</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit WeakPerson</span>
+</span></span></code></pre></div><p>Теперь про unowned. Сразу примерчик и в этот раз мучаем собаку.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">UnownedDog</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">unowned</span> <span class="kd">var</span> <span class="nv">person</span><span class="p">:</span> <span class="n">Person</span> <span class="c1">// обратите внимание что здесь мы ОБЯЗАНЫ</span>
+</span></span><span class="line"><span class="cl">                            <span class="c1">// задать значение person</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Поэтому пишем инициализатор</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">deinit</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Deinit UnownedDog&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">firstScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">unownedDog</span> <span class="p">=</span> <span class="n">UnownedDog</span><span class="p">()</span>              
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">secondScope</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">person</span><span class="p">.</span><span class="n">dog</span> <span class="p">=</span> <span class="n">dog</span>
+</span></span><span class="line"><span class="cl">        <span class="n">unownedDog</span><span class="p">.</span><span class="n">person</span> <span class="p">=</span> <span class="n">person</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;second end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;first end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Выведет:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit Person</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// second end</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// first end</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit Person</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Deinit Dog</span>
+</span></span></code></pre></div><p>В это примере 2 раза освобождается память (Deinit Person), так как первый раз мы создаем объект Person при инициализации Dog, а второй раз в первой области видимости. И получается что первый раз деинициализатор Person срабатывает внутри второй области видимости.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-05-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swift_part_11/" class="prev" rel="prev" title="Road to IOS/Swift dev part 11"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 11</a>
+            <a href="/posts/swift_part_13/" class="next" rel="next" title="Road to IOS/Swift dev part 13">Road to IOS/Swift dev part 13<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
