@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_9\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  120 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  376 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_9\/","datePublished": "2022-05-04T00:00:00+00:00","dateModified": "2022-05-04T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,8 +77,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 9</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-04">2022-05-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;120 слов&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;Одна минута&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-04">2022-05-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;376 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Содержание</span>
@@ -88,16 +88,17 @@
   <ul>
     <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
       <ul>
-        <li><a href="#15-наблюдатели-свойствproperty-observers">15. Наблюдатели свойств(property observers)</a></li>
+        <li><a href="#16-наблюдатели-свойствproperty-observers">16. Наблюдатели свойств(property observers)</a></li>
+        <li><a href="#17-перечисления-enums">17. Перечисления (enums)</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>Стартовые понятия Swift. Наблюдатели свойств.</p>
+            </div><div class="content" id="content"><p>Стартовые понятия Swift. Наблюдатели свойств. Перечисления</p>
 <h1 id="road-to-iosswift-dev-part-9">Road to IOS/Swift dev part 9</h1>
 <h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
 <!-- raw HTML omitted -->
-<h3 id="15-наблюдатели-свойствproperty-observers">15. Наблюдатели свойств(property observers)</h3>
+<h3 id="16-наблюдатели-свойствproperty-observers">16. Наблюдатели свойств(property observers)</h3>
 <p>Наблюдатели свойств - это такие штуковины, которые наблюдают за изменениями значения свойств</p>
 <p>willSet - будет изменено</p>
 <p>didSet - было изменено</p>
@@ -127,6 +128,92 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// new access level = 1</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// didSet, oldValue 0</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">emp</span><span class="p">.</span><span class="n">accessToDB</span><span class="p">)</span> <span class="c1">// true</span>
+</span></span></code></pre></div><h3 id="17-перечисления-enums">17. Перечисления (enums)</h3>
+<p>Перечисления - объединяют значения и присваевают ему общий тип. Вы не можете выйти за рамки данного типа. Имеют вычисляемые свойства, методы экземпляров, инициализаторы.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// простой enum</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">Movement</span> <span class="p">:</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">forward</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">backward</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="kr">left</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="kr">right</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">moveDir</span><span class="p">:</span> <span class="n">Movement</span> <span class="p">=</span> <span class="p">.</span><span class="kr">left</span> <span class="c1">// аналогично Movement.left</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">sMoveDir</span> <span class="p">=</span> <span class="n">Movement</span><span class="p">.</span><span class="kr">right</span><span class="p">.</span><span class="n">rawValue</span> <span class="c1">// &#34;right&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">Numbr</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">one</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">two</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">n</span> <span class="p">=</span> <span class="n">Numbr</span><span class="p">.</span><span class="n">one</span><span class="p">.</span><span class="n">rawValue</span> <span class="c1">// 0</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">n2</span> <span class="p">=</span> <span class="n">Numbr</span><span class="p">.</span><span class="n">two</span><span class="p">.</span><span class="n">rawValue</span> <span class="c1">// 2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Вычисляемые свойства</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">Device</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">iPad</span><span class="p">,</span> <span class="n">iPhone</span><span class="p">,</span> <span class="n">iPodTouch</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">year</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="kc">self</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="p">.</span><span class="n">iPhone</span><span class="p">:</span> <span class="k">return</span> <span class="mi">2007</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="p">.</span><span class="n">iPodTouch</span><span class="p">(</span><span class="kd">let</span> <span class="nv">color</span><span class="p">)</span> <span class="k">where</span> <span class="n">color</span> <span class="p">==</span> <span class="s">&#34;black&#34;</span><span class="p">:</span> <span class="k">return</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="p">.</span><span class="n">iPodTouch</span> <span class="k">return</span> <span class="mi">2005</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="p">.</span><span class="n">iPad</span> <span class="k">return</span> <span class="mi">2010</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">d</span> <span class="p">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">iPad</span><span class="p">.</span><span class="n">year</span> <span class="c1">// 2010</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">ipod</span> <span class="p">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">iPodTouch</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="s">&#34;black&#34;</span><span class="p">).</span><span class="n">year</span> <span class="c1">// 2020</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Вложенные enum&#39;ы</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">Character</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">enum</span> <span class="nc">Weapon</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="n">sword</span> <span class="p">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="n">wand</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">damage</span><span class="p">:</span> <span class="nb">Int</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">rawValue</span> <span class="o">*</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">enum</span> <span class="nc">CharacterType</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="n">knight</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="n">mage</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">charWeapon</span> <span class="p">=</span> <span class="nb">Character</span><span class="p">.</span><span class="n">Weapon</span><span class="p">.</span><span class="n">sword</span><span class="p">.</span><span class="n">damage</span> <span class="c1">// 40</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Индеректрые enum&#39;ы</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">Lunch</span> <span class="p">{</span> <span class="c1">// inderect может быть и сам enum</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">salad</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">soup</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">indirect</span> <span class="k">case</span> <span class="n">meal</span><span class="p">(</span><span class="n">Lunch</span><span class="p">,</span> <span class="n">Lunch</span><span class="p">)</span> <span class="c1">// индиректный enum</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">myLunch</span> <span class="p">=</span> <span class="n">Lunch</span><span class="p">.</span><span class="n">meal</span><span class="p">(.</span><span class="n">salad</span><span class="p">,</span> <span class="p">.</span><span class="n">soup</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// swift 5.0 update</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">Planet</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">earth</span><span class="p">,</span> <span class="n">mars</span><span class="p">,</span> <span class="n">neptune</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">action</span><span class="p">(</span><span class="n">onPlanet</span> <span class="n">planet</span><span class="p">:</span> <span class="n">Planet</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="n">planet</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="p">.</span><span class="n">earth</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Earth&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="p">.</span><span class="n">mars</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Mars&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="p">.</span><span class="n">neptune</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Neptune&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// @unknown заставляет обрабатывать каждый новый кейс,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// например если добавить в Planet jupiter</span>
+</span></span><span class="line"><span class="cl">        <span class="p">@</span><span class="n">unknown</span> <span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;default&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

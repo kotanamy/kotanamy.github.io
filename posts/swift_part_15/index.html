@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 15 - Kotanamy</title><meta name="Description" content="Стартовые понятия Swift"><meta property="og:title" content="Road to IOS/Swift dev part 15" />
+<meta property="og:description" content="Стартовые понятия Swift" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/swift_part_15/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-31T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 15"/>
+<meta name="twitter:description" content="Стартовые понятия Swift"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/swift_part_15/" /><link rel="prev" href="https://kotanamy.github.io/posts/swift_part_14/" /><link rel="next" href="https://kotanamy.github.io/posts/swift_part_16/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 15",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_15\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  668 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_15\/","datePublished": "2022-05-31T00:00:00+00:00","dateModified": "2022-05-31T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия Swift"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 15</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-31">2022-05-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;668 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
+      <ul>
+        <li><a href="#24-обработка-ошибок-error-handling">24. Обработка ошибок (Error handling)</a></li>
+        <li><a href="#25-subscripts">25. Subscripts</a></li>
+        <li><a href="#26-расширения-extentions">26. Расширения (Extentions)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Стартовые понятия Swift. Обработка ошибок. Subscripts. Расширения.</p>
+<h1 id="road-to-iosswift-dev-part-15">Road to IOS/Swift dev part 15</h1>
+<h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
+<!-- raw HTML omitted -->
+<h3 id="24-обработка-ошибок-error-handling">24. Обработка ошибок (Error handling)</h3>
+<p>Сразу примерчик. Есть библиотека, в которой можно купить книги.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Перечисление подписанное под протокол Error</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// для того чтобы генерировать ошибку</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// (подробнее про протоколы в сл статьях)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">PossibleErrors</span><span class="p">:</span> <span class="n">Error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">notInStock</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">notEnoughtMoney</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Структура, если у нее не заполнены дефолтные поля,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// то она сама их заполняет дефолтными значениями, подробнее ниже</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">Book</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">price</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">count</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Library</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">deposit</span> <span class="p">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">libraryBooks</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Book1&#34;</span><span class="p">:</span> <span class="n">Book</span><span class="p">(</span><span class="n">price</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="bp">count</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Book2&#34;</span><span class="p">:</span> <span class="n">Book</span><span class="p">(</span><span class="n">price</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="bp">count</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span> <span class="s">&#34;Book3&#34;</span><span class="p">:</span> <span class="n">Book</span><span class="p">(</span><span class="n">price</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="bp">count</span><span class="p">:</span> <span class="mi">3</span><span class="p">)]</span> <span class="c1">// почленный инициализатор</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// этот метод будет генерировать ошибку</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// для этого нужно написать throws</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// throws пишется до стрелочки</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">getTheBook</span><span class="p">(</span><span class="n">withName</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="kr">throws</span><span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="c1">// Продается ли в библиотеке такая книга?</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="kd">var</span> <span class="nv">book</span> <span class="p">=</span> <span class="n">libraryBooks</span><span class="p">(</span><span class="n">withName</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="n">PossibleErrors</span><span class="p">.</span><span class="n">notInStock</span> <span class="c1">// данной книги нет вналичии</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Есть ли хотя бы 1 книга вналичии?</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="n">book</span><span class="p">.</span><span class="bp">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="n">PossibleErrors</span><span class="p">.</span><span class="n">notInStock</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Хватает ли у нас денег на ее покупку?</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="n">book</span><span class="p">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="n">deposit</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="n">PossibleErrors</span><span class="p">.</span><span class="n">notEnoughtMoney</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Если все хорошо, то:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">deposit</span> <span class="o">-=</span> <span class="n">book</span><span class="p">.</span><span class="n">price</span> <span class="c1">// платим деньги</span>
+</span></span><span class="line"><span class="cl">        <span class="n">book</span><span class="p">.</span><span class="bp">count</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1">// уменьшаем количество книг вналичии</span>
+</span></span><span class="line"><span class="cl">        <span class="n">libraryBooks</span><span class="p">[</span><span class="n">withName</span><span class="p">]</span> <span class="p">=</span> <span class="n">book</span> <span class="c1">// обновляем данные о книге в библиотеке</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;You got the Book </span><span class="si">\(</span><span class="n">withName</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span> <span class="c1">// выводим инфу пользователю</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">library</span> <span class="p">=</span> <span class="n">Library</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Эта запись сгенерирует ошибку</span>
+</span></span><span class="line"><span class="cl"><span class="n">library</span><span class="p">.</span><span class="n">getTheBook</span><span class="p">(</span><span class="n">withName</span><span class="p">:</span> <span class="s">&#34;Book2&#34;</span><span class="p">)</span> <span class="c1">// Call can thow but not marked with &#39;try&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Нужно писать через try</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">?</span> <span class="n">library</span><span class="p">.</span><span class="n">getTheBook</span><span class="p">(</span><span class="n">withName</span><span class="p">:</span> <span class="s">&#34;Book1&#34;</span><span class="p">)</span> <span class="c1">// You got the Book1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// использовать try! нужно только в том случае</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// если 100% уверены что метод отработает</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// обычный try используется для того чтобы</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// его поместить в do catch блок</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span> <span class="c1">// если все впорядке, выполнится этот блок</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="n">library</span><span class="p">.</span><span class="n">getTheBook</span><span class="p">(</span><span class="n">withName</span><span class="p">:</span> <span class="s">&#34;Book2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="n">PossibleErrors</span><span class="p">.</span><span class="n">notInStock</span> <span class="p">{</span> <span class="c1">// ловим ошибку notInStock</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Book is not in stock&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="n">PossibleErrors</span><span class="p">.</span><span class="n">notEnoughtMoney</span> <span class="p">{</span> <span class="c1">// ловим ошибку notEnoughtMoney</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;not enought money&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Выведет:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Book is not in stock</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// альтернативная запись для try? (опциональный try)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">doConnection</span><span class="p">()</span> <span class="kr">throws</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Случай 1</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">x</span> <span class="p">=</span> <span class="k">try</span><span class="p">?</span> <span class="n">doConnection</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Случай 2</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">y</span><span class="p">:</span> <span class="nb">Int</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="p">=</span> <span class="k">try</span> <span class="n">doConnection</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// случаи записи 1 и 2 идентичны</span>
+</span></span></code></pre></div><p><strong>defer</strong> - блок кода, который выполняется после прекращением работы функции. defer&rsquo;ы выполняются в обратном порядке.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">attempt</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">whareverFunc</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">defer</span> <span class="p">{</span> <span class="c1">// выполнится 2ым</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attempt</span> <span class="o">+=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">defer</span> <span class="p">{</span> <span class="c1">// выполнится 1ым</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attempt</span> <span class="o">*=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// defer выполнится после switch</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="n">param</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="mi">200</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="p">:</span> <span class="k">return</span> <span class="mi">400</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">w</span> <span class="p">=</span> <span class="n">whateverFunc</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="c1">// 200</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">attempt</span><span class="p">)</span> <span class="c1">// 2</span>
+</span></span></code></pre></div><h3 id="25-subscripts">25. Subscripts</h3>
+<p>Subscripts - по сути index</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">// array[1] - subscript</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">WorkPlace</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">table</span><span class="p">:</span> <span class="nb">String</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">workPlace</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Subscript</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">subscript</span><span class="p">(</span><span class="n">index</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">get</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">switch</span> <span class="n">index</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">case</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="n">workPlace</span><span class="p">.</span><span class="bp">count</span><span class="p">:</span> <span class="k">return</span> <span class="n">workPlace</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">case</span> <span class="mf">1.</span><span class="p">.&lt;</span><span class="n">workPlace</span><span class="p">.</span><span class="bp">count</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="k">return</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">default</span><span class="p">:</span> <span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kr">set</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">switch</span> <span class="n">index</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">case</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="n">table</span> <span class="p">=</span> <span class="n">newValue</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">case</span> <span class="mf">1.</span><span class="p">.&lt;</span><span class="n">workPlace</span><span class="p">.</span><span class="bp">count</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="n">workPlace</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="n">newValue</span> <span class="p">??</span> <span class="s">&#34;&#34;</span> <span class="c1">// заменяющий nil оператор</span>
+</span></span><span class="line"><span class="cl">                <span class="k">default</span><span class="p">:</span> <span class="k">break</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">work</span> <span class="p">=</span> <span class="n">WorkPlace</span><span class="p">(</span><span class="n">table</span><span class="p">:</span> <span class="s">&#34;T&#34;</span><span class="p">,</span> <span class="n">workPlace</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;A&#34;</span><span class="p">,</span> <span class="s">&#34;B&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">work</span><span class="p">.</span><span class="n">workPlace</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">// B</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Subscript use</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 0-вой элемент - это T</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">work1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">// B</span>
+</span></span></code></pre></div><h3 id="26-расширения-extentions">26. Расширения (Extentions)</h3>
+<p>Расширения используются для того чтобы вы могли сами расширить уже существующий функционал уже существубщего типа. 
+<em><strong>Примечание.</strong> Раширения не могут иметь свойства хранения, летивые свойства</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">Int</span> <span class="p">{</span> <span class="c1">// расширение могут быть подписаны под протоколы</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Четность числа</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">isEven</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">self</span> <span class="o">%</span> <span class="mi">2</span> <span class="p">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="kc">true</span> <span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Вычисляем степень</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">power</span><span class="p">(</span><span class="n">powerValue</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">car</span> <span class="n">tempValue</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="kc">_</span> <span class="k">in</span> <span class="mf">1.</span><span class="p">.&lt;</span><span class="n">powerValue</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tempValue</span> <span class="o">*=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tempValue</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">11</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">isEven</span><span class="p">)</span> <span class="c1">// false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">power</span><span class="p">(</span><span class="n">powerValue</span><span class="p">:</span> <span class="mi">3</span><span class="p">))</span> <span class="c1">// 8</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-05-31</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swift_part_14/" class="prev" rel="prev" title="Road to IOS/Swift dev part 14"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 14</a>
+            <a href="/posts/swift_part_16/" class="next" rel="next" title="Road to IOS/Swift dev part 16">Road to IOS/Swift dev part 16<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

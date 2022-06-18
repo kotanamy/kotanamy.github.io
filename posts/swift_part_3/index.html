@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_3\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  311 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  312 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_3\/","datePublished": "2022-04-13T00:00:00+00:00","dateModified": "2022-04-13T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 3</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-13">2022-04-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;311 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-13">2022-04-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;312 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -98,7 +98,7 @@
 <h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
 <!-- raw HTML omitted -->
 <h3 id="6-условные-операторы">6. Условные операторы</h3>
-<p>6.1 if</p>
+<h4 id="61-if">6.1 if</h4>
 <p>Конструкция if проверяет истинность некоторого условия и в зависимости от результатов проверки выполняет отпределенный код</p>
 <p>Условия бывают:</p>
 <ol>
@@ -143,7 +143,7 @@
 </code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="n">a</span> <span class="p">?</span> <span class="s">&#34;true&#34;</span> <span class="p">:</span> <span class="s">&#34;false&#34;</span> <span class="c1">// b = true  </span>
-</span></span></code></pre></div><p>6.2 guard</p>
+</span></span></code></pre></div><h4 id="62-guard">6.2 guard</h4>
 <p>Функции будут описаны позднее, так что на func следует просто принимать за абстрактный блок кода в вакууме</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">someFunc</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// guard всегда требует else</span>
@@ -156,11 +156,11 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>6.3 switch</p>
+</span></span></code></pre></div><h4 id="63-switch">6.3 switch</h4>
 <p>switch нужет чтобы if else не городить :)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">total</span> <span class="p">=</span> <span class="mi">10</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="n">total</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="n">total</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="mf">5.</span><span class="p">..</span><span class="mi">10</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;You win&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">fallthrough</span> <span class="c1">// провалиться вниз чтобы еще отыграл еще один case</span>

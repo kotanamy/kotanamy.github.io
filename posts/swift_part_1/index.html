@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_1\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  545 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  610 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_1\/","datePublished": "2022-04-11T00:00:00+00:00","dateModified": "2022-04-11T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-11">2022-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;545 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-11">2022-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;610 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -91,9 +91,9 @@
         <li><a href="#1-предисловие">1. Предисловие</a></li>
         <li><a href="#2-константы-и-переменные">2. Константы и переменные</a></li>
         <li><a href="#3-типы-данных">3. Типы данных</a></li>
+        <li><a href="#базовые-операторы">Базовые операторы</a></li>
       </ul>
     </li>
-    <li><a href="#базовые-операторы">Базовые операторы</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Стартовые понятия Swift. Предисловие, константы и переменные,типы данных, базовые операторы.</p>
@@ -102,8 +102,8 @@
 <!-- raw HTML omitted -->
 <h3 id="1-предисловие">1. Предисловие</h3>
 <!-- raw HTML omitted -->
-<p>То что вы читаете - это подобие туториалов для начинающих по языку Swift и IOS разработке. Понятие не имею зачем написал первые 5 туторов, для начинающих это будет скорее вредно, чем полезно, так что рекомендую начать с каких-нибудь курсов (например, swiftbook), а для матерых прогеров он не несет какой-то ценности.</p>
-<!-- raw HTML omitted -->
+<p>То что вы читаете - это подобие туториалов для начинающих по языку Swift и IOS разработке, коих много в интернетах. Основы взял от swiftbook, перевел их в текстовый формат. Возможно что-то дополню от себя. После первых 17 статей будет что-то сложнее чем основы языка. Делаю это исключительно для себя, если вдруг кому-то поможет, то я не при делах.
+<!-- raw HTML omitted --></p>
 <h3 id="2-константы-и-переменные">2. Константы и переменные</h3>
 <!-- raw HTML omitted -->
 <p><em>Примечание: функция print() выводит входные аргументы на экран</em></p>
@@ -128,7 +128,16 @@
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">d</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">4.123456789012345</span> <span class="c1">// 15 знаков после запятой</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">false</span> <span class="c1">// true or false</span>
 </span></span></code></pre></div><p>Swift сам умеет определять тип константы\переменной:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">s</span> <span class="p">=</span> <span class="s">&#34;String&#34;</span> <span class="c1">// равносильно let s: String = &#34;String&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// строка - это коллекция</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">s</span> <span class="p">=</span> <span class="s">&#34;String&#34;</span> <span class="c1">// равносильно let s: String = &#34;String&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// В swift 4 появилась возможность создавать многострочные строки</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">multiString</span> <span class="p">=</span> 
+</span></span><span class="line"><span class="cl"><span class="s">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">        В swift 4 появилась 
+</span></span></span><span class="line"><span class="cl"><span class="s">    возможность создавать 
+</span></span></span><span class="line"><span class="cl"><span class="s">многострочные строки 
+</span></span></span><span class="line"><span class="cl"><span class="s">&#34;&#34;&#34;</span> <span class="c1">// отступы отсчитываются от этих ковычек</span>
 </span></span></code></pre></div><p>Преобразование типов:</p>
 <p>Преобразование Double -&gt; Int</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">d</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">777.333</span>
@@ -139,7 +148,7 @@
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">charArr</span><span class="p">)</span> <span class="c1">// [&#34;S&#34;, &#34;w&#34;, &#34;i&#34;, &#34;f&#34;, &#34;t&#34;] (part2 5.1)</span>
 </span></span><span class="line"><span class="cl"><span class="n">type</span><span class="p">(</span><span class="n">of</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="c1">// Выведет тип константы string (String)</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
-<h2 id="базовые-операторы">Базовые операторы</h2>
+<h3 id="базовые-операторы">Базовые операторы</h3>
 <!-- raw HTML omitted -->
 <p>Оператор присваивания</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">swift</span> <span class="p">=</span> <span class="s">&#34;Swift&#34;</span>
@@ -177,9 +186,14 @@
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span> <span class="p">==</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">5</span> <span class="p">{</span> <span class="c1">// если a равно 2 и b не равно 5, то печатаем а</span>
 </span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Операторы диапазона (&hellip;, ..&lt;)</p>
+</span></span></code></pre></div><p>Операторы диапазона (&hellip;, ..&lt;, ..)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="mf">1.</span><span class="p">..</span><span class="mi">10</span> <span class="c1">// 10 входит</span>
 </span></span><span class="line"><span class="cl"><span class="mf">1.</span><span class="p">.&lt;</span><span class="mi">10</span> <span class="c1">// 10 НЕ входит</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// односторонний диапазон</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">arr</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;1&#34;</span><span class="p">,</span> <span class="s">&#34;2&#34;</span><span class="p">,</span> <span class="s">&#34;3&#34;</span><span class="p">,</span> <span class="s">&#34;4&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[..&lt;</span><span class="mi">2</span><span class="p">])</span><span class="c1">// 1, 2</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[...</span><span class="mi">2</span><span class="p">])</span> <span class="c1">//  1, 2, 3</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mf">1.</span><span class="p">..])</span> <span class="c1">// 2, 3, 4</span>
 </span></span></code></pre></div><!-- raw HTML omitted --></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

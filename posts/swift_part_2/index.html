@@ -106,7 +106,7 @@
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">helloWorld</span> <span class="p">=</span> <span class="s">&#34;Hello </span><span class="si">\(</span><span class="n">world</span><span class="si">)</span><span class="s"> or </span><span class="si">\(</span><span class="n">sd</span><span class="si">)</span><span class="s">&#34;</span> <span class="c1">// &#34;Hello World or Swift Developer&#34;</span>
 </span></span></code></pre></div><h3 id="5-типы-коллекций">5. Типы коллекций</h3>
 <p>Swift обеспечивает три основных типа коллекций - это массивы, множества и словари.</p>
-<p>5.1 <strong>Массивы</strong></p>
+<h4 id="51-массивы">5.1. <strong>Массивы</strong></h4>
 <p>Массив - это упорядоченная коллекция в которой могут содержатся переменные одного типа</p>
 <p>Объявление массива:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">array</span> <span class="p">=</span> <span class="nb">Array</span><span class="p">&lt;</span><span class="nb">Int</span><span class="p">&gt;()</span> <span class="c1">// пустой массив</span>
@@ -133,7 +133,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="n">removeFirst</span><span class="p">()</span> <span class="c1">// [10, 5, 1, 7, 100] удалили 1ый элемент (возвращает значение)</span>
 </span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="bp">removeLast</span><span class="p">()</span> <span class="c1">//  [10, 5, 1, 7] удалили последний элемент (возвращает значение)</span>
 </span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">.</span><span class="bp">reverse</span><span class="p">()</span> <span class="c1">// [7, 1, 5, 10] перевернули</span>
-</span></span></code></pre></div><p>5.2 Словари</p>
+</span></span></code></pre></div><h4 id="52-словари">5.2 Словари</h4>
 <p>Словарь - это неупорядоченная коллекция в которой каждый элемент имеет ключ и значение</p>
 <p>Объявление словаря:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">dict</span> <span class="p">=</span> <span class="nb">Dictionary</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">,</span> <span class="nb">String</span><span class="p">&gt;()</span> <span class="c1">// создали словарь</span>
@@ -155,7 +155,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Удаляем целиком словарь</span>
 </span></span><span class="line"><span class="cl"><span class="n">dogName</span><span class="p">.</span><span class="bp">removeAll</span><span class="p">()</span> <span class="c1">// или dogName = [:]</span>
-</span></span></code></pre></div><p>5.3 Множества</p>
+</span></span></code></pre></div><h4 id="53-множества">5.3 Множества</h4>
 <p>Множество - это неупорядоченная коллекция уникальных значений</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">set1</span> <span class="p">=</span> <span class="n">Set</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">&gt;()</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">set2</span><span class="p">:</span> <span class="n">Set</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">[]</span>
