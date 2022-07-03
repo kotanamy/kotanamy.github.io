@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 20 - Kotanamy</title><meta name="Description" content="Стартовые понятия архитектуры"><meta property="og:title" content="Road to IOS/Swift dev part 20" />
+<meta property="og:description" content="Стартовые понятия архитектуры" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/xarchitecture_1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-28T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 20"/>
+<meta name="twitter:description" content="Стартовые понятия архитектуры"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/xarchitecture_1/" /><link rel="prev" href="https://kotanamy.github.io/posts/swiftui_uikit/" /><link rel="next" href="https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 20",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/xarchitecture_1\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial, Architecture","wordcount":  471 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/xarchitecture_1\/","datePublished": "2022-06-28T00:00:00+00:00","dateModified": "2022-06-28T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия архитектуры"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><a class="menu-item" href="/"> Resume </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a class="menu-item" href="/" title="">Resume</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 20</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;Одно слово&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-архитектуры"><strong>Стартовые понятия архитектуры</strong></a></li>
+    <li><a href="#введение">Введение</a></li>
+    <li><a href="#чистая-архитектура">Чистая архитектура</a></li>
+    <li><a href="#паттерны-проектирования">Паттерны проектирования</a>
+      <ul>
+        <li><a href="#singleton">Singleton</a></li>
+        <li><a href="#mvx">MV(X)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Архитектура. Введение.</p>
+<h1 id="road-to-iosswift-dev-part-20">Road to IOS/Swift dev part 20</h1>
+<h2 id="стартовые-понятия-архитектуры"><strong>Стартовые понятия архитектуры</strong></h2>
+<!-- raw HTML omitted -->
+<h2 id="введение">Введение</h2>
+<p>В стате про архитектуру я не буду подробно расписывать каждую из них, так как в интернете есть 100500 человек которые сделали это до меня, причем намного лучше. В свою очередь, я дам ссылки на материалы.</p>
+<p>Для начала введем 2 понятия:</p>
+<p><strong>Архитектурный паттерн</strong> - наивысший слой детализации, используется для описания структуры программы в целом.</p>
+<p><strong>Паттерн проектирования</strong> - средний слой детализации, описывает компоненты отдельных архитектурных паттернов и реализацию их взаимодействия.</p>
+<p>Или так:</p>
+<p><strong>Архитектурный паттерн</strong> - типичное решение широко распространенной проблемы. Отличается от алгоритма тем, что не содержит четкой последовательности действий, а описывает общую концепцию (идею) решения, реализации которой могут сильно отличаться.</p>
+<p><strong>Паттерн проектирования</strong> - решает какую-то локальную проблему в проекте, затрагивая лишь конкретный блок кода, но не весь код проекта целиком.</p>
+<p>В рамках статей об паттернах я попробую описать несколько самых популярных патернов для IOS. Из наиболее популярных, по моему скромному мнению, Singleton, MVC, MVP, MVVM, VIPER.</p>
+<h2 id="чистая-архитектура">Чистая архитектура</h2>
+<p><em><strong>Примечание</strong>. Если совсем не знакомы с патерными проектирования, то рекомендую начать с них.</em></p>
+<p>Наткнулся на эту <a href="habr.com/ru/company/croc/blog/560674/?ysclid=l4xu4nhapd46329134" rel="">статью</a> на хабре, в ней сказано:</p>
+<blockquote>
+<p>У всех MV(X) архитектур есть один общий недостаток: они не описывают как должно происходить взаимодействие между экранами, только то как данные циркулируют внутри экрана</p>
+</blockquote>
+<p>С чем я соглашусь. Кстати, статью рекомендую к прочтению перед прочтением дальнейшего.</p>
+<p>Еще тогда одну цитатку:</p>
+<blockquote>
+<p>По сути, MV(X) архитектуры и не являются архитектурами вовсе - это презентационные паттерны, которые описывают слой представления и не более того. В этом-то и кроектся вся проблема! Мы пытаемся испольковать MVC как архитектуру, когда это просто паттерн для описания ее кусочка.</p>
+</blockquote>
+<p>По сути что мы хотим от архитектуры, чтобы нам в конкретный момент времени было понятно куда писать <del>свой говнокод</del> свой код, как должны взаимодействовать <del>кучки говна</del> &ldquo;модули&rdquo; между собой, кто кого должен вызывать, кто от кого должен наследоваться, кто о ком должен знать и многое другое. Если обощить, то как писать без грязи и чтобы ты сам мог легко влезть в код через день\неделю\месяц\год.</p>
+<p>Что такое чистая архитектура - это рекомендации по организации системной архитектуры. Они были предложены Робертом С. Мартином (известным так же как Дядя Боб) и основаны на ряде прежних архитектурных построений, таких как гексагональная архитектура, луковая архитектура и т.д.</p>
+<p>Чистая архитектура нам предлагает посмотреть на картиночку, на которой пока ничего не понятно и ничего не объясняется, какие-то ебучие кружочки.</p>
+<p><figure><a class="lightgallery" href="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" title="CleanArchitecture" data-thumbnail="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" data-sub-html="<h2>Чистая архитектура</h2><p>CleanArchitecture</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg"
+            data-srcset="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg, https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg 1.5x, https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg 2x"
+            data-sizes="auto"
+            alt="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" />
+    </a><figcaption class="image-caption">Чистая архитектура</figcaption>
+    </figure></p>
+<p>Чтобы разобраться во всей этой каше, я предлагаю вам ознакомиться с <a href="habr.com/ru/post/269589/?ysclid=l4xxdnb9xy649286059" rel="">переведенной статьей от Дядюшки Боба на хабре</a>.</p>
+<h2 id="паттерны-проектирования">Паттерны проектирования</h2>
+<p>Сюда общее разделение паттернов бахнуть надо</p>
+<h3 id="singleton">Singleton</h3>
+<p>В изучении патернов я бы начал с Singleton. Он нужен для того, чтобы быть уверенным что существует только 1 объект класса на весь жизненный цикл приложения.</p>
+<p>Продробнее о singleton можно прочитать в <a href="_______________________" rel="">этой статье с хабра</a>.</p>
+<p>Пример реализации</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Singleton</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">Singleton</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="mvx">MV(X)</h3>
+<p>Ссылка: <a href="________________________" rel="">тык</a></p>
+<p>Ссылка2: <a href="_______________________" rel="">тык</a></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-06-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a>,&nbsp;<a href="/tags/architecture/">Architecture</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/swiftui_uikit/" class="prev" rel="prev" title="Road to IOS/Swift dev part 19"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 19</a>
+            <a href="/posts/ios_dev_roadmap_and_tasks/" class="next" rel="next" title="Road to IOS/Swift dev roadmap">Road to IOS/Swift dev roadmap<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

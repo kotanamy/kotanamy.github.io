@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_1\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  610 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  714 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_1\/","datePublished": "2022-04-11T00:00:00+00:00","dateModified": "2022-04-11T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,8 +77,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-11">2022-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;610 слов&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-11">2022-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;714 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Содержание</span>
@@ -147,6 +147,24 @@
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">charArr</span><span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">charArr</span><span class="p">)</span> <span class="c1">// [&#34;S&#34;, &#34;w&#34;, &#34;i&#34;, &#34;f&#34;, &#34;t&#34;] (part2 5.1)</span>
 </span></span><span class="line"><span class="cl"><span class="n">type</span><span class="p">(</span><span class="n">of</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="c1">// Выведет тип константы string (String)</span>
+</span></span></code></pre></div><h4 id="31-ввод-с-клавиатуры">3.1 Ввод с клавиатуры</h4>
+<p>readLine() используется для чтения входных данных пользователя. Он имеет 2 формы:</p>
+<ol>
+<li>readLine() - по умолчанию</li>
+<li>readLine(strippingNewLine: Bool) - по умолчанию установлено значение true. Swift всегда предполагает, что новая строчка не является частью ввода</li>
+</ol>
+<p>Пример использования</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">str</span> <span class="p">=</span> <span class="n">readLine</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</span></span></code></pre></div><p>Все рассказанное ниже будет не понятно новичкам, не придавайте этому значения, в последующих уроках будет рассказаны все необъясненные термины.</p>
+<p>Чтение Int</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">inputInt</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+</span></span></code></pre></div><p>Чтение массива Int</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">arrInt</span> <span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="n">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">.</span><span class="n">components</span><span class="p">(</span><span class="n">separatedBy</span><span class="p">:</span><span class="s">&#34; &#34;</span><span class="p">).</span><span class="bp">map</span><span class="p">{</span> <span class="nb">Int</span><span class="p">(</span><span class="nv">$0</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
+</span></span></code></pre></div><p>Чтение массива по строкам (т.е. через \n (enter))</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">arrInt</span> <span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="n">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">.</span><span class="n">components</span><span class="p">(</span><span class="n">separatedBy</span><span class="p">:</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">).</span><span class="bp">map</span><span class="p">{(</span><span class="n">a</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="nb">Int</span><span class="p">)</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">Int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <h3 id="базовые-операторы">Базовые операторы</h3>
 <!-- raw HTML omitted -->

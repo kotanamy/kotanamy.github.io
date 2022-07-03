@@ -3,7 +3,28 @@
         <title>Documentation - Категория - Kotanamy</title>
         <link>https://kotanamy.github.io/categories/documentation/</link>
         <description>Documentation - Категория - Kotanamy</description>
-        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Wed, 15 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://kotanamy.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://kotanamy.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+    <title>Road to IOS/Swift dev roadmap</title>
+    <link>https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/</link>
+    <pubDate>Fri, 01 Jul 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/</guid>
+    <description><![CDATA[<p>Roadmap and tasks for Swift\IOS dev</p>]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 20</title>
+    <link>https://kotanamy.github.io/posts/xarchitecture_1/</link>
+    <pubDate>Tue, 28 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/xarchitecture_1/</guid>
+    <description><![CDATA[<p>Архитектура. Введение.</p>]]></description>
+</item><item>
+    <title>Road to IOS/Swift dev part 19</title>
+    <link>https://kotanamy.github.io/posts/swiftui_uikit/</link>
+    <pubDate>Mon, 27 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swiftui_uikit/</guid>
+    <description><![CDATA[<p>SwiftUI и UIKit</p>]]></description>
+</item><item>
     <title>Road to IOS/Swift dev part 18</title>
     <link>https://kotanamy.github.io/posts/swift_part_18/</link>
     <pubDate>Wed, 15 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -52,26 +73,5 @@
     <author>Автор</author>
     <guid>https://kotanamy.github.io/posts/swift_part_12/</guid>
     <description><![CDATA[<p>Стартовые понятия Swift. Автоматический подсчет ссылок.</p>]]></description>
-</item><item>
-    <title>Road to IOS/Swift dev part 11</title>
-    <link>https://kotanamy.github.io/posts/swift_part_11/</link>
-    <pubDate>Sun, 22 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Автор</author>
-    <guid>https://kotanamy.github.io/posts/swift_part_11/</guid>
-    <description><![CDATA[<p>Стартовые понятия Swift. Приведение типа. Проверка типа. Any. Anyobject.</p>]]></description>
-</item><item>
-    <title>Road to IOS/Swift dev part 10</title>
-    <link>https://kotanamy.github.io/posts/swift_part_10/</link>
-    <pubDate>Sat, 21 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Автор</author>
-    <guid>https://kotanamy.github.io/posts/swift_part_10/</guid>
-    <description><![CDATA[<p>Стартовые понятия Swift. Структуры.</p>]]></description>
-</item><item>
-    <title>Road to IOS/Swift dev part 9</title>
-    <link>https://kotanamy.github.io/posts/swift_part_9/</link>
-    <pubDate>Wed, 04 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Автор</author>
-    <guid>https://kotanamy.github.io/posts/swift_part_9/</guid>
-    <description><![CDATA[<p>Стартовые понятия Swift. Наблюдатели свойств. Перечисления</p>]]></description>
 </item></channel>
 </rss>
