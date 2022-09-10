@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_5\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  697 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  911 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_5\/","datePublished": "2022-04-29T00:00:00+00:00","dateModified": "2022-04-29T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,8 +77,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 5</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-29">2022-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;697 слов&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;4 минут&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-29">2022-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;911 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Содержание</span>
@@ -90,6 +90,8 @@
       <ul>
         <li><a href="#8-функции">8. Функции</a></li>
         <li><a href="#9-замыкания-closure">9. Замыкания (Closure)</a></li>
+        <li><a href="#91-базовое-понимание-замыкания">9.1. Базовое понимание замыкания</a></li>
+        <li><a href="#92-escaping-сбегающее-замыкние--completion-handler">9.2. @escaping (сбегающее замыкние) (+ completion handler)</a></li>
       </ul>
     </li>
   </ul>
@@ -182,6 +184,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">missedCount</span> <span class="p">=</span> <span class="n">WAT</span><span class="p">(</span><span class="n">missed</span><span class="p">:</span> <span class="kc">false</span><span class="p">)(</span><span class="n">missedCount</span><span class="p">)</span> <span class="c1">// -1</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">missedCount</span><span class="p">)</span> <span class="c1">// 1</span>
 </span></span></code></pre></div><h3 id="9-замыкания-closure">9. Замыкания (Closure)</h3>
+<h3 id="91-базовое-понимание-замыкания">9.1. Базовое понимание замыкания</h3>
 <p>Что такое замыкания и с чем их едят?</p>
 <p><strong>Замыкания</strong> - это самодостаточные блоки с определенным функционалом, которые могут быть переданы и использованы в вашем коде. Замыкания могут захватывать и хранить ссылки на любые константы и переменные из контекста, в котором они объявлены. Эта процедура называется <em>заключение</em> этих констант и переменных, отсюда и название &ldquo;замыкание&rdquo;. Swift выполняет всю работу с управлением памятью при захвате за вас.</p>
 <p>Вот это closure, но это &ldquo;нерабочий&rdquo; пример :)</p>
@@ -201,6 +204,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">repeatThreeTimes</span><span class="p">(</span><span class="n">closure</span><span class="p">:</span> <span class="n">myClosure</span><span class="p">)</span> <span class="c1">// вызываем myClosure</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// или так</span>
 </span></span><span class="line"><span class="cl"><span class="n">repeatThreeTimes</span><span class="p">(</span><span class="n">closure</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="p">-&gt;</span> <span class="p">()</span> <span class="k">in</span>     <span class="c1">// явное указание типа замыкания</span>
 </span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Im closure to&#34;</span><span class="p">)</span>
@@ -213,14 +217,33 @@
 </span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="p">-&gt;</span> <span class="p">()</span> <span class="k">in</span>
 </span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Im closure to&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Сортируем массив замыканием, по сути передаем алгоритм того как мы сортируем</p>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// здесь важно чтобы замыкание передавалось последним аргументом в функцию</span>
+</span></span></code></pre></div><p>Сортируем массив замыканием, по сути передаем алгоритм того как мы сортируем (будет описано позже в статье про функции высшего порятка)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">unsortedArray</span> <span class="p">=</span> <span class="p">{</span><span class="mi">123</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">1224</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">sortedArray</span> <span class="p">=</span> <span class="n">unsortedArray</span><span class="p">.</span><span class="bp">sorted</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="n">number1</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">number2</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="k">in</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">number1</span> <span class="o">&lt;</span> <span class="n">number2</span> <span class="c1">// тут &#34;алгоритм&#34; сортировки</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+</span></span></code></pre></div><h3 id="92-escaping-сбегающее-замыкние--completion-handler">9.2. @escaping (сбегающее замыкние) (+ completion handler)</h3>
+<p><strong>Сбегающее замыкание (@escaping)</strong> - это ключевой термин, используемый для обозначения жизненного цикла замыкания, который передаётся в качестве аргумента функции. Добавляя к любому аргументу замыкания префикс @escaping, вы передаете сообщение вызывающему функцию, что это замыкание может &ldquo;избежать&rdquo; область вызова функции. Без префикса @escaping замыкание по умолчанию не является сбегающим <em>(кроме опциональных замыканий)</em>, и его жизненный цикл заканчивается вместе с областью действия функции.</p>
+<p>Хорошим примером @escaping будет completion handler. Сompletion handler - это обработчик завершения, он нужен для выполнения какой либо задачи после завершения другой задачи. Например, обновить пользовательский интерфейс после завершения загрузки файла.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">imDownload</span> <span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="p">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Я СДЭЛЯЛЬ!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">compleationHandlerFunc</span><span class="p">(@</span><span class="n">escaping</span> <span class="n">complete</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Здесь скачиваем долго&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Globals</span><span class="p">.</span><span class="n">delay</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">closure</span><span class="p">:</span> <span class="p">{</span> <span class="c1">// вызовется через 0.5 сек</span>
+</span></span><span class="line"><span class="cl">        <span class="n">complete</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;обработчик завершения будет чуть позже, пожалуйста имейте терпение&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;compleationHandlerFunc завершила свою работу, а complete не завершается, так как @escaping&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">compleationHandlerFunc</span><span class="p">(</span><span class="n">complete</span><span class="p">:</span> <span class="n">imDownload</span><span class="p">)</span>
+</span></span></code></pre></div><p>Пример наверное (точно) не самый хороший, но вроде суть отражает, если вдруг не понятно, то в 19 статье есть пример получше. Если и это не поможет, то гугл залечится ваши раны и заполнит пустоту в душе.</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

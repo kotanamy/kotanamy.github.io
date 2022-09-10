@@ -3,7 +3,14 @@
         <title>Все Статьи - Kotanamy</title>
         <link>https://kotanamy.github.io/posts/</link>
         <description>Все Статьи | Kotanamy</description>
-        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://kotanamy.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Mon, 08 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://kotanamy.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Road to IOS/Swift dev part 19</title>
+    <link>https://kotanamy.github.io/posts/swift_part_19/</link>
+    <pubDate>Mon, 08 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>Автор</author>
+    <guid>https://kotanamy.github.io/posts/swift_part_19/</guid>
+    <description><![CDATA[<p>Стартовые понятия Swift. GCD, Async\Await, OperationQueue</p>]]></description>
+</item><item>
     <title>Road to IOS/Swift dev roadmap</title>
     <link>https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/</link>
     <pubDate>Fri, 01 Jul 2022 00:00:00 &#43;0000</pubDate>
@@ -18,7 +25,7 @@
     <guid>https://kotanamy.github.io/posts/xarchitecture_1/</guid>
     <description><![CDATA[<p>Архитектура. Введение.</p>]]></description>
 </item><item>
-    <title>Road to IOS/Swift dev part 19</title>
+    <title>Road to IOS/Swift dev SwiftUI and UIKit</title>
     <link>https://kotanamy.github.io/posts/swiftui_uikit/</link>
     <pubDate>Mon, 27 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Автор</author>
@@ -66,12 +73,5 @@
     <author>Автор</author>
     <guid>https://kotanamy.github.io/posts/swift_part_13/</guid>
     <description><![CDATA[<p>Стартовые понятия Swift. ARC в замыканиях.</p>]]></description>
-</item><item>
-    <title>Road to IOS/Swift dev part 12</title>
-    <link>https://kotanamy.github.io/posts/swift_part_12/</link>
-    <pubDate>Mon, 23 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Автор</author>
-    <guid>https://kotanamy.github.io/posts/swift_part_12/</guid>
-    <description><![CDATA[<p>Стартовые понятия Swift. Автоматический подсчет ссылок.</p>]]></description>
 </item></channel>
 </rss>

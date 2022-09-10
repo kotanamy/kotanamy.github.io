@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_6\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  350 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  469 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_6\/","datePublished": "2022-05-01T00:00:00+00:00","dateModified": "2022-05-01T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,8 +77,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 6</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-01">2022-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;350 слов&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;2 минут&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-01">2022-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;469 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Содержание</span>
@@ -151,7 +151,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">fuel</span><span class="si">)</span><span class="s"> liters left&#34;</span><span class="p">)</span> <span class="c1">// Optional(20) liters left</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Принудительное изменение значения</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Принудительное извлечение значения</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// если в этот момент fuel будет nil, то приложение крашнется</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">fuel</span><span class="p">!</span><span class="si">)</span><span class="s"> liters left&#34;</span><span class="p">)</span>
@@ -181,6 +181,39 @@
 </span></span><span class="line"><span class="cl"><span class="n">checkFuel</span><span class="p">()</span> <span class="c1">// Все плохо</span>
 </span></span><span class="line"><span class="cl"><span class="n">fuel</span> <span class="p">=</span> <span class="mi">10</span>
 </span></span><span class="line"><span class="cl"><span class="n">checkFuel</span><span class="p">()</span> <span class="c1">// 10</span>
+</span></span></code></pre></div><p>Приведение типов</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="k">as</span><span class="p">?</span> <span class="nb">Int</span><span class="p">)</span> <span class="c1">// &#39;b&#39; будет равно nil, если &#39;a&#39; нельзя преобразовать в Int</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="k">as</span><span class="p">!</span> <span class="nb">Int</span><span class="p">)</span> <span class="c1">// если &#39;a&#39; нельзя преобразовать в Int, программа завершится</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p><strong>Вынесу отдельно несколько способов развернуть optional</strong></p>
+<p>Forse unwrapping (проверяю на nil, а то вдруг &ldquo;a&rdquo; пустая):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">=</span> <span class="s">&#34;a&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="n">a</span><span class="p">!)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>guard</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">=</span> <span class="s">&#34;b&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">guard</span> <span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="n">b</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span></code></pre></div><p>if let</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">c</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">=</span> <span class="s">&#34;c&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="kd">let</span> <span class="nv">c</span> <span class="p">=</span> <span class="n">c</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>nil coalescing</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">d</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">=</span> <span class="s">&#34;d&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">d</span> <span class="p">??</span> <span class="s">&#34;Error&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Optional chaining</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">e</span> <span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">=</span> <span class="s">&#34;e&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">e</span><span class="p">?.</span><span class="n">uppercased</span><span class="p">())</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <pre tabindex="0"><code>                  | hi im Elvice |
 Элвис будет       |__   _________|          | hi, Elvice  |

@@ -18,7 +18,7 @@
 <meta name="application-name" content="Kotanamy">
 <meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/" /><link rel="prev" href="https://kotanamy.github.io/posts/xarchitecture_1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/" /><link rel="prev" href="https://kotanamy.github.io/posts/xarchitecture_1/" /><link rel="next" href="https://kotanamy.github.io/posts/swift_part_19/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/ios_dev_roadmap_and_tasks\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  175 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  150 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/ios_dev_roadmap_and_tasks\/","datePublished": "2022-07-01T00:00:00+00:00","dateModified": "2022-07-01T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev roadmap</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-01">2022-07-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;175 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-01">2022-07-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;150 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;Одна минута&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -130,24 +130,25 @@
 <li><i class="far fa-check-square fa-fw"></i> Протоколы.</li>
 <li><i class="far fa-check-square fa-fw"></i> Универсальные типы.</li>
 <li><i class="far fa-check-square fa-fw"></i> Функции высшего порядка (map, mapValues, filter, reduce, flatMap, zip).</li>
-<li>[] Многопоточность (GCD, Operation)</li>
+<li><i class="far fa-check-square fa-fw"></i> Async\Await</li>
+<li><i class="far fa-check-square fa-fw"></i> Многопоточность (GCD, Operation)</li>
 </ul>
 <p>Архитектура и все что с ней связано</p>
 <ul>
 <li><i class="far fa-check-square fa-fw"></i> Общее описание</li>
-<li><i class="far fa-check-square fa-fw"></i> Clean architecture</li>
+<li><i class="far fa-check-square fa-fw"></i> Clean architecture (mini guide)</li>
 <li><i class="far fa-check-square fa-fw"></i> Singleton</li>
-<li>[] MVC</li>
-<li>[] MVP</li>
-<li>[] Coordinator</li>
-<li>[] MVVM</li>
-<li>[] VIPER</li>
-<li>[] SOLID</li>
-<li>[] KISS</li>
+<li><i class="far fa-square fa-fw"></i> MVC</li>
+<li><i class="far fa-square fa-fw"></i> MVP</li>
+<li><i class="far fa-square fa-fw"></i> Coordinator</li>
+<li><i class="far fa-square fa-fw"></i> MVVM</li>
+<li><i class="far fa-square fa-fw"></i> VIPER</li>
+<li><i class="far fa-square fa-fw"></i> SOLID</li>
+<li><i class="far fa-square fa-fw"></i> KISS</li>
 </ul>
 <p>SwiftUI</p>
 <ul>
-<li>[]</li>
+<li><i class="far fa-square fa-fw"></i> </li>
 </ul>
 <p>UIKit (Текстовых статей не будет)</p>
 <ul>
@@ -155,34 +156,34 @@
 </ul>
 <p>Работа с интернетом</p>
 <ul>
-<li>[] HTTP (общее описание)</li>
-<li>[] TCP</li>
-<li>[] UDP</li>
-<li>[] Работа с сетью (Swift) (URLSession)</li>
-<li>[] REST API</li>
-<li>[] JSON</li>
-<li>[] Alamofire</li>
-<li>[] OAuth</li>
-<li>[] Реализация клиент серверного приложения</li>
+<li><i class="far fa-square fa-fw"></i> HTTP (общее описание)</li>
+<li><i class="far fa-square fa-fw"></i> TCP</li>
+<li><i class="far fa-square fa-fw"></i> UDP</li>
+<li><i class="far fa-square fa-fw"></i> Работа с сетью (Swift) (URLSession)</li>
+<li><i class="far fa-square fa-fw"></i> REST API</li>
+<li><i class="far fa-square fa-fw"></i> JSON</li>
+<li><i class="far fa-square fa-fw"></i> Alamofire</li>
+<li><i class="far fa-square fa-fw"></i> OAuth</li>
+<li><i class="far fa-square fa-fw"></i> Реализация клиент серверного приложения</li>
 </ul>
 <p>RXSwift\Combine</p>
 <ul>
-<li>[]</li>
+<li><i class="far fa-square fa-fw"></i> </li>
 </ul>
 <p>Git</p>
 <ul>
-<li>[]</li>
+<li><i class="far fa-square fa-fw"></i> </li>
 </ul>
 <p>Other</p>
 <ul>
-<li>[] Pod</li>
-<li>[] XCode</li>
-<li>[] SwiftLint</li>
-<li>[] Unit Testing (XCTest)</li>
-<li>[] UI Testing (XCUITest)</li>
-<li>[] KVC - KVO</li>
-<li>[] CI\CD (GitHub Actions)</li>
-<li>[] SwiftGen</li>
+<li><i class="far fa-square fa-fw"></i> Pod</li>
+<li><i class="far fa-square fa-fw"></i> XCode</li>
+<li><i class="far fa-square fa-fw"></i> SwiftLint</li>
+<li><i class="far fa-square fa-fw"></i> Unit Testing (XCTest)</li>
+<li><i class="far fa-square fa-fw"></i> UI Testing (XCUITest)</li>
+<li><i class="far fa-square fa-fw"></i> KVC - KVO</li>
+<li><i class="far fa-square fa-fw"></i> CI\CD (GitHub Actions)</li>
+<li><i class="far fa-square fa-fw"></i> SwiftGen</li>
 </ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -206,7 +207,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/xarchitecture_1/" class="prev" rel="prev" title="Road to IOS/Swift dev part 20"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 20</a></div>
+    <div class="post-nav"><a href="/posts/xarchitecture_1/" class="prev" rel="prev" title="Road to IOS/Swift dev part 20"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 20</a>
+            <a href="/posts/swift_part_19/" class="next" rel="next" title="Road to IOS/Swift dev part 19">Road to IOS/Swift dev part 19<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

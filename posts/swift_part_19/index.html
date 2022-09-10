@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Road to IOS/Swift dev part 19 - Kotanamy</title><meta name="Description" content="Стартовые понятия Swift"><meta property="og:title" content="Road to IOS/Swift dev part 19" />
+<meta property="og:description" content="Стартовые понятия Swift" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kotanamy.github.io/posts/swift_part_19/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-08T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to IOS/Swift dev part 19"/>
+<meta name="twitter:description" content="Стартовые понятия Swift"/>
+<meta name="application-name" content="Kotanamy">
+<meta name="apple-mobile-web-app-title" content="Kotanamy"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kotanamy.github.io/posts/swift_part_19/" /><link rel="prev" href="https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Road to IOS/Swift dev part 19",
+        "inLanguage": "ru",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_19\/"
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  672 ,
+        "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_19\/","datePublished": "2022-08-08T00:00:00+00:00","dateModified": "2022-08-08T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kotanamy"},"author": {
+                "@type": "Person",
+                "name": "Kotanamy"
+            },"description": "Стартовые понятия Swift"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kotanamy">Kotanamy</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/cv.pdf"> CV </a><a class="menu-item" href="/"> Resume </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kotanamy">Kotanamy</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/cv.pdf" title="">CV</a><a class="menu-item" href="/" title="">Resume</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Сменить Тему">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Содержание</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 19</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-08">2022-08-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;672 слов&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 минут&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Содержание</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></a>
+      <ul>
+        <li><a href="#291-gcd">29.1. <strong>GCD</strong></a></li>
+        <li><a href="#292-operation-queue">29.2. <strong>Operation Queue</strong></a></li>
+        <li><a href="#293-asyncawait">29.3. <strong>Async\Await</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Стартовые понятия Swift. GCD, Async\Await, OperationQueue</p>
+<h1 id="road-to-iosswift-dev-part-19">Road to IOS/Swift dev part 19</h1>
+<h2 id="стартовые-понятия-swift"><strong>Стартовые понятия Swift</strong></h2>
+<!-- raw HTML omitted -->
+<h3 id="291-gcd">29.1. <strong>GCD</strong></h3>
+<p><strong>GCD</strong> (Grand Central Dispatch) - фреймворк, позволяющий работать с потоками.</p>
+<p>О GCD написано очень много всего интересного, поэтому здесь соберу просто несколько материалов:</p>
+<ul>
+<li><a href="https://youtube.com/playlist?list=PLmTuDg46zmKCKjZqxXqJFjGXwzqGQi4D3" target="_blank" rel="noopener noreffer">TheSwiftDeveloper</a></li>
+<li><a href="https://habr.com/ru/post/578752/" target="_blank" rel="noopener noreffer">Статья на хабре</a></li>
+<li><a href="https://www.raywenderlich.com/5370-grand-central-dispatch-tutorial-for-swift-4-part-1-2/" target="_blank" rel="noopener noreffer">Raywenderlich</a></li>
+<li><a href="https://youtu.be/uEeFqlUXJcE" target="_blank" rel="noopener noreffer">Видосик</a> для проверки знаний</li>
+</ul>
+<p>Еще можно почитать SwiftBook или Apple доку</p>
+<h3 id="292-operation-queue">29.2. <strong>Operation Queue</strong></h3>
+<p>Постановка задачи:</p>
+<p>Готовим обед, нам нужно почистить овощи, чистка каждого овоща - независимый процесс, чистить овощи можно независимо друг от друга, т.е. асинхронно, но перейти к приготовлению конкретного блюда мы сможем лишь почистив все овощи, т.е. завершив все операции.</p>
+<p>У нас, получается, есть несколько независимых процессов, однако их результаты могут быть использованны после завершения всех процессов.</p>
+<p>Operation представляет собой законченную задачу и является абстрактным классом, который предоставляет вам потока-безопасную структуру для моделирования состояния операции, ее приоритета, зависимостей(dependencies) от других Operations и управления этой операцией.</p>
+<p>OperationQueue (очередь операций) вызывает свои объекты (Operation) в очереди на основе их приоритета и готовности. После добавления операции в очередь она остается в очереди до тех пор, пока операция не завершит свою задачу. Вы не можете напрямую удалить операцию из очереди после ее добавления.</p>
+<p>Особенности:
+Очереди операций сохраняет в памяти все операции до их завершения, при этом сами очереди сохраняются в памяти до завершения всех операций. Приостановка очереди операций с незавершенными операциями может привести к утечке памяти.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Vegetable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">id</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">alreadyChopped</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">chopped</span><span class="p">(</span><span class="n">completion</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span><span class="p">((</span><span class="n">Vegetable</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Start </span><span class="si">\(</span><span class="n">id</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alreadyChopped</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Thread</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">forTimeInterval</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;End </span><span class="si">\(</span><span class="n">id</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">completion</span><span class="p">(</span><span class="kc">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">gatherRawVeggies</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="n">Vegetable</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Vegetable</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Последовательность операций по чистке овощей</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// В этом методе будем создавать очередь процессов</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// добавлять блоки операций для каждого овоща</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// и реализуем приостановку очереди для синхронизации всех операций</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">chopVegetables</span><span class="p">(</span><span class="n">completion</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(([</span><span class="n">Vegetable</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">rawVeggies</span><span class="p">:</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">=</span> <span class="n">gatherRawVeggies</span><span class="p">()</span> <span class="c1">// овощи которые надо почистить</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">choppedVeggies</span><span class="p">:</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span> <span class="c1">// почищенные овощи</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// вот так создается очередь операций</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">queue</span> <span class="p">=</span> <span class="n">OperationQueue</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Для каждого овоща (элемента массива)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">rawVeggie</span> <span class="k">in</span> <span class="n">rawVeggies</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Создаем отдельный блок операции </span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">operation</span> <span class="p">=</span> <span class="n">BlockOperation</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Очищаем овощ</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rawVeggie</span><span class="p">.</span><span class="n">chopped</span> <span class="p">{</span> <span class="n">choppedVeggie</span> <span class="k">in</span> <span class="c1">// completion раскрываем</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// добавляем в массив очищенных овощей</span>
+</span></span><span class="line"><span class="cl">                <span class="n">choppedVeggies</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">choppedVeggie</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// добавляем каждый отдельный блок</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// в очередь операций</span>
+</span></span><span class="line"><span class="cl">        <span class="n">queue</span><span class="p">.</span><span class="n">addOperation</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Чтобы синхронизировать выполнение операции</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// используем Barrier Block</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// он приостанавливает выполнение очередного блока в очереди</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// для завершения ранее добавленных операций</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Получается мы ждем пока дочистится последний овощ</span>
+</span></span><span class="line"><span class="cl">    <span class="n">queue</span><span class="p">.</span><span class="n">addBarrierBlock</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Возвращаем его через completion</span>
+</span></span><span class="line"><span class="cl">        <span class="n">completion</span><span class="p">(</span><span class="n">choppedVeggies</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Пробуем вызвать</span>
+</span></span><span class="line"><span class="cl"><span class="n">chopVegetables</span> <span class="p">{</span> <span class="n">veggies</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">veggie</span> <span class="k">in</span> <span class="n">veggies</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">veggie</span><span class="p">.</span><span class="n">id</span><span class="si">)</span><span class="s"> is chopped </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">veggie</span><span class="p">.</span><span class="n">chopped</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Второй овощ не очитится</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// будет утечка памяти</span>
+</span></span></code></pre></div><p>Подробнее о Operation и OperationQueue можно прочитать в <a href="https://habr.com/ru/post/335756/" target="_blank" rel="noopener noreffer">этой</a> статье. А так же, конечно, можно сунуться в официальную документацию Apple.</p>
+<h3 id="293-asyncawait">29.3. <strong>Async\Await</strong></h3>
+<p>Решим ту же задачу, что и в пункте 29 (Operation Queue) с помощью Async/Await</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Vegetable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">id</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">alreadyChopped</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Этот метод должен выполняться ассинхронно</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// поэтому помечен как async</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// И этот метод может ничего не вернуть (сгенерировать ошибку) (throws)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// вызывать его надо с &#34;try&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">chopped</span><span class="p">()</span> <span class="n">async</span> <span class="kr">throws</span> <span class="p">-&gt;</span> <span class="n">Vegetable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Vegetable </span><span class="si">\(</span><span class="n">id</span><span class="si">)</span><span class="s"> starts chop&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alreadyChopped</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Thread</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">forTimeInterval</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;End </span><span class="si">\(</span><span class="n">id</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">gatherRawVeggies</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="n">Vegetable</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Vegetable</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Метод очистки овощей</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// тоже ассинхронный</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Возвращаем набор очищенных овощей</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">chopVegetable</span><span class="p">()</span> <span class="n">async</span> <span class="kr">throws</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">rawVeggies</span><span class="p">:</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">=</span> <span class="n">gatherRawVeggies</span><span class="p">()</span> <span class="c1">// овощи которые надо почистить</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">choppedVeggies</span><span class="p">:</span> <span class="p">[</span><span class="n">Vegetable</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span> <span class="c1">// почищенные овощи</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Чистим овощи</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">rawVeggie</span> <span class="k">in</span> <span class="n">rawVeggies</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// await используется для вызова async функций</span>
+</span></span><span class="line"><span class="cl">        <span class="n">choppedVeggies</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="k">try</span> <span class="n">await</span> <span class="n">rawVeggie</span><span class="p">.</span><span class="n">chopped</span><span class="p">())</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// возвращаем почищенные овощи</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">choppedVeggies</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// асинхронные методы вызываем вот так</span>
+</span></span><span class="line"><span class="cl"><span class="n">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">veggies</span> <span class="p">=</span> <span class="k">try</span> <span class="n">await</span> <span class="n">chopVegetable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">veggie</span> <span class="k">in</span> <span class="n">veggies</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">veggie</span><span class="p">.</span><span class="n">id</span><span class="si">)</span><span class="s"> is chopped </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">veggie</span><span class="p">.</span><span class="n">chopped</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Все четко отработает</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Все почистим</span>
+</span></span></code></pre></div><p>Подробнее о Async/Await можно прочитать в <a href="https://habr.com/ru/company/citymobil/blog/571360/" target="_blank" rel="noopener noreffer">этой</a> или <a href="https://www.avanderlee.com/swift/async-await/" target="_blank" rel="noopener noreffer">этой</a> статьях. А так же, конечно, можно окунуться в оф документацию Apple.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Oбновлена 2022-08-08</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/swift/ios/">Swift/IOS</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Назад</a></span>&nbsp;|&nbsp;<span><a href="/">Домой</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/ios_dev_roadmap_and_tasks/" class="prev" rel="prev" title="Road to IOS/Swift dev roadmap"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev roadmap</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Сделано <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Тема - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Наверх">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Посмотреть комментарии">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Копировать в буфер обмена","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

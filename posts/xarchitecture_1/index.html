@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/xarchitecture_1\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial, Architecture","wordcount":  471 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial, Architecture","wordcount":  459 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/xarchitecture_1\/","datePublished": "2022-06-28T00:00:00+00:00","dateModified": "2022-06-28T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 20</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;Одно слово&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;459 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -98,7 +98,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Архитектура. Введение.</p>
-<h1 id="road-to-iosswift-dev-part-20">Road to IOS/Swift dev part 20</h1>
+<h1 id="road-to-iosswift-dev-architecture">Road to IOS/Swift dev. Architecture.</h1>
 <h2 id="стартовые-понятия-архитектуры"><strong>Стартовые понятия архитектуры</strong></h2>
 <!-- raw HTML omitted -->
 <h2 id="введение">Введение</h2>
@@ -121,20 +121,20 @@
 <blockquote>
 <p>По сути, MV(X) архитектуры и не являются архитектурами вовсе - это презентационные паттерны, которые описывают слой представления и не более того. В этом-то и кроектся вся проблема! Мы пытаемся испольковать MVC как архитектуру, когда это просто паттерн для описания ее кусочка.</p>
 </blockquote>
-<p>По сути что мы хотим от архитектуры, чтобы нам в конкретный момент времени было понятно куда писать <del>свой говнокод</del> свой код, как должны взаимодействовать <del>кучки говна</del> &ldquo;модули&rdquo; между собой, кто кого должен вызывать, кто от кого должен наследоваться, кто о ком должен знать и многое другое. Если обощить, то как писать без грязи и чтобы ты сам мог легко влезть в код через день\неделю\месяц\год.</p>
+<p>По сути что мы хотим от архитектуры, чтобы нам в конкретный момент времени было понятно куда писать свой код, как должны взаимодействовать &ldquo;модули&rdquo; между собой, кто кого должен вызывать, кто от кого должен наследоваться, кто о ком должен знать и многое другое. Если обощить, то как писать без грязи и чтобы ты сам мог легко влезть в код через день\неделю\месяц\год.</p>
 <p>Что такое чистая архитектура - это рекомендации по организации системной архитектуры. Они были предложены Робертом С. Мартином (известным так же как Дядя Боб) и основаны на ряде прежних архитектурных построений, таких как гексагональная архитектура, луковая архитектура и т.д.</p>
-<p>Чистая архитектура нам предлагает посмотреть на картиночку, на которой пока ничего не понятно и ничего не объясняется, какие-то ебучие кружочки.</p>
-<p><figure><a class="lightgallery" href="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" title="CleanArchitecture" data-thumbnail="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" data-sub-html="<h2>Чистая архитектура</h2><p>CleanArchitecture</p>">
+<p>Чистая архитектура, собственной персоны. Художник Ван Гог, XIX век н.э. (раннее, так сказать)</p>
+<p><figure><a class="lightgallery" href="____________________________" title="CleanArchitecture" data-thumbnail="____________________________" data-sub-html="<h2>Чистая архитектура</h2><p>CleanArchitecture</p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg"
-            data-srcset="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg, https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg 1.5x, https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg 2x"
+            data-src="____________________________"
+            data-srcset="____________________________, ____________________________ 1.5x, ____________________________ 2x"
             data-sizes="auto"
-            alt="https://habrastorage.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" />
+            alt="____________________________" />
     </a><figcaption class="image-caption">Чистая архитектура</figcaption>
     </figure></p>
-<p>Чтобы разобраться во всей этой каше, я предлагаю вам ознакомиться с <a href="habr.com/ru/post/269589/?ysclid=l4xxdnb9xy649286059" rel="">переведенной статьей от Дядюшки Боба на хабре</a>.</p>
+<p>Чтобы разобраться во всей этой каше, я предлагаю вам ознакомиться с <a href="habr.com/ru/post/269589/" rel="">переведенной статьей от Дядюшки Боба на хабре</a>.</p>
 <h2 id="паттерны-проектирования">Паттерны проектирования</h2>
 <p>Сюда общее разделение паттернов бахнуть надо</p>
 <h3 id="singleton">Singleton</h3>
@@ -171,7 +171,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/swiftui_uikit/" class="prev" rel="prev" title="Road to IOS/Swift dev part 19"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev part 19</a>
+    <div class="post-nav"><a href="/posts/swiftui_uikit/" class="prev" rel="prev" title="Road to IOS/Swift dev SwiftUI and UIKit"><i class="fas fa-angle-left fa-fw"></i>Road to IOS/Swift dev SwiftUI and UIKit</a>
             <a href="/posts/ios_dev_roadmap_and_tasks/" class="next" rel="next" title="Road to IOS/Swift dev roadmap">Road to IOS/Swift dev roadmap<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>

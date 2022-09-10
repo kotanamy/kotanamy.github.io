@@ -2,6 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://kotanamy.github.io/posts/swift_part_19/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/posts/ios_dev_roadmap_and_tasks/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/posts/xarchitecture_1/</loc><lastmod>2022-06-28T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/posts/swiftui_uikit/</loc><lastmod>2022-06-27T00:00:00&#43;00:00</lastmod></url><url>
@@ -24,12 +25,12 @@
             <loc>https://kotanamy.github.io/posts/swift_part_2/</loc><lastmod>2022-04-12T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/posts/swift_part_1/</loc><lastmod>2022-04-11T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/posts/markdown_tutorial/</loc><lastmod>2022-04-10T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://kotanamy.github.io/categories/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://kotanamy.github.io/categories/documentation/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://kotanamy.github.io/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://kotanamy.github.io/posts/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://kotanamy.github.io/tags/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://kotanamy.github.io/tags/tutorial/</loc><lastmod>2022-07-01T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://kotanamy.github.io/categories/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://kotanamy.github.io/categories/documentation/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://kotanamy.github.io/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://kotanamy.github.io/posts/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://kotanamy.github.io/tags/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://kotanamy.github.io/tags/tutorial/</loc><lastmod>2022-08-08T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/tags/architecture/</loc><lastmod>2022-06-28T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/tags/markdown/</loc><lastmod>2022-04-10T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://kotanamy.github.io/tags/swift/ios/</loc></url></urlset>

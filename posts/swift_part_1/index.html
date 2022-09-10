@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/swift_part_1\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  714 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial","wordcount":  847 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/swift_part_1\/","datePublished": "2022-04-11T00:00:00+00:00","dateModified": "2022-04-11T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-11">2022-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;714 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-11">2022-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;847 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -90,8 +90,8 @@
       <ul>
         <li><a href="#1-предисловие">1. Предисловие</a></li>
         <li><a href="#2-константы-и-переменные">2. Константы и переменные</a></li>
-        <li><a href="#3-типы-данных">3. Типы данных</a></li>
-        <li><a href="#базовые-операторы">Базовые операторы</a></li>
+        <li><a href="#3-типы-данных-базовые-операторы">3. Типы данных, базовые операторы.</a></li>
+        <li><a href="#32-базовые-операторы">3.2 Базовые операторы</a></li>
       </ul>
     </li>
   </ul>
@@ -102,21 +102,27 @@
 <!-- raw HTML omitted -->
 <h3 id="1-предисловие">1. Предисловие</h3>
 <!-- raw HTML omitted -->
-<p>То что вы читаете - это подобие туториалов для начинающих по языку Swift и IOS разработке, коих много в интернетах. Основы взял от swiftbook, перевел их в текстовый формат. Возможно что-то дополню от себя. После первых 17 статей будет что-то сложнее чем основы языка. Делаю это исключительно для себя, если вдруг кому-то поможет, то я не при делах.
+<p>То что вы читаете - это подобие туториалов для начинающих по языку Swift и IOS разработке, коих много в интернетах. Основы взял от swiftbook, перевел их в текстовый формат со своими дополнениями и вставками. Делаю это исключительно для себя, если вдруг кому-то поможет - то я не при делах.</p>
+<p>Если кому-то нужна коротенькая справочка, то рекомендую <a href="swiftly.dev" rel="">эту</a>.
 <!-- raw HTML omitted --></p>
 <h3 id="2-константы-и-переменные">2. Константы и переменные</h3>
 <!-- raw HTML omitted -->
 <p><em>Примечание: функция print() выводит входные аргументы на экран</em></p>
-<p>Отличие переменной от константы - переменная <strong>может</strong> изменяться, константа <strong>нет</strong>.</p>
+<p>Отличие переменной от константы: переменная <strong>может</strong> изменяться, константа <strong>нет</strong>.</p>
 <p>Пример:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">v</span> <span class="p">=</span> <span class="s">&#34;Hello var&#34;</span> <span class="c1">// переменная</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">l</span> <span class="p">=</span> <span class="s">&#34;Hello let&#34;</span> <span class="c1">// константа</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="p">=</span> <span class="s">&#34;var&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">l</span> <span class="p">=</span> <span class="s">&#34;not var&#34;</span> <span class="c1">// ошибка, нельзя изменять потому что константа</span>
-</span></span></code></pre></div><p>По возможности всегда используйте константы. ( var поменять на let = хорошо, let поменять на var = плохо )</p>
+</span></span></code></pre></div><p>По возможности всегда используйте константы. ( var поменять на let = хорошо, let поменять на var = не долго )</p>
 <!-- raw HTML omitted -->
-<h3 id="3-типы-данных">3. Типы данных</h3>
+<p><em><em>Немного занудства</em></em></p>
+<p><em>Почему же let лучше var?</em></p>
+<p><em>Иммутабельность или неизменяемость, предполагает, что после создания данные или структура, которая их содержит, не могут быть изменены.</em></p>
+<p><em>Итак, мы можем пометить &ldquo;let&rdquo; не только константу, а также коллекцию, структуру или объект. Коллекция помеченная как неизменяемая, дает возможность компилятору выделить для нее непрерывную память, что позволит ускорить операцию чтения, в сравнении с обычной динамической коллекцией (по этой причине, для особых нужд, в Swift имеется коллекция ContiguousArray). Для изменяемых объектов, компилятору может потребоваться сгенерировать код, который копирует изменяемый объект, когда он используется как свойство другого объекта, а вот для неизменяемых лишнего кода не будет. Сравнение для неизменяемых объектов также может быть оптимизированно компилятором. У структур, мотоды которые изменяют поля структуры должны быть помечены &ldquo;mutable&rdquo;</em></p>
+<!-- raw HTML omitted -->
+<h3 id="3-типы-данных-базовые-операторы">3. Типы данных, базовые операторы.</h3>
 <!-- raw HTML omitted -->
 <p>Основные типы данных:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="nb">Character</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span> <span class="nb">Int</span><span class="p">,</span> <span class="nb">Double</span><span class="p">,</span> <span class="nb">Float</span><span class="p">,</span> <span class="nb">Bool</span>
@@ -147,17 +153,21 @@
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">charArr</span><span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">charArr</span><span class="p">)</span> <span class="c1">// [&#34;S&#34;, &#34;w&#34;, &#34;i&#34;, &#34;f&#34;, &#34;t&#34;] (part2 5.1)</span>
 </span></span><span class="line"><span class="cl"><span class="n">type</span><span class="p">(</span><span class="n">of</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="c1">// Выведет тип константы string (String)</span>
-</span></span></code></pre></div><h4 id="31-ввод-с-клавиатуры">3.1 Ввод с клавиатуры</h4>
-<p>readLine() используется для чтения входных данных пользователя. Он имеет 2 формы:</p>
+</span></span></code></pre></div><p>Разбить строку на массив слов</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">cars</span> <span class="p">=</span> <span class="s">&#34;audi, wv, lada&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">arrayCars</span> <span class="p">=</span> <span class="n">cars</span><span class="p">.</span><span class="n">components</span><span class="p">(</span><span class="n">separatedBy</span><span class="p">:</span> <span class="s">&#34; &#34;</span><span class="p">)</span> <span class="c1">// [&#34;audi&#34;, &#34;wv&#34;, &#34;lada&#34;]</span>
+</span></span></code></pre></div><p>Чтобы узнать больше <a href="https://swiftbook.ru/content/languageguide/strings-and-characters/" target="_blank" rel="noopener noreffer">ТЫК</a></p>
+<h4 id="31-ввод-с-клавиатуры">3.1 Ввод с &ldquo;клавиатуры&rdquo;</h4>
+<p>readLine() используется для чтения входных данных пользователя. Он имеет 2 определения:</p>
 <ol>
 <li>readLine() - по умолчанию</li>
 <li>readLine(strippingNewLine: Bool) - по умолчанию установлено значение true. Swift всегда предполагает, что новая строчка не является частью ввода</li>
 </ol>
-<p>Пример использования</p>
+<p>Примеры использования:</p>
+<p>Чтение строки</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">str</span> <span class="p">=</span> <span class="n">readLine</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
-</span></span></code></pre></div><p>Все рассказанное ниже будет не понятно новичкам, не придавайте этому значения, в последующих уроках будет рассказаны все необъясненные термины.</p>
-<p>Чтение Int</p>
+</span></span></code></pre></div><p>Чтение Int</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">inputInt</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
 </span></span></code></pre></div><p>Чтение массива Int</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">arrInt</span> <span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="n">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">.</span><span class="n">components</span><span class="p">(</span><span class="n">separatedBy</span><span class="p">:</span><span class="s">&#34; &#34;</span><span class="p">).</span><span class="bp">map</span><span class="p">{</span> <span class="nb">Int</span><span class="p">(</span><span class="nv">$0</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
@@ -166,7 +176,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">Int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">!</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
-<h3 id="базовые-операторы">Базовые операторы</h3>
+<h3 id="32-базовые-операторы">3.2 Базовые операторы</h3>
 <!-- raw HTML omitted -->
 <p>Оператор присваивания</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">swift</span> <span class="p">=</span> <span class="s">&#34;Swift&#34;</span>
@@ -178,14 +188,14 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">5</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">b</span> <span class="p">=</span> <span class="mi">10</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">+=</span> <span class="n">a</span> <span class="c1">// равносильно f = f + a, составной оператор &#34;+=&#34; (а = 15)</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">+=</span> <span class="n">a</span> <span class="c1">// равносильно f = f + a, составной оператор &#34;+=&#34; (f = 15)</span>
 </span></span></code></pre></div><p>Операторы сравнения (&gt;=, &lt;=, !=, ==, &lt;, &gt;)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">4</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="mi">5</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">c</span> <span class="p">=</span> <span class="mi">5</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">bool</span> <span class="n">d</span> <span class="p">=</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">b</span> <span class="c1">// a не равно b? (true)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bool</span> <span class="n">e</span> <span class="p">=</span> <span class="n">b</span> <span class="p">==</span> <span class="n">c</span> <span class="c1">// b равно с? (true)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">d</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">b</span> <span class="c1">// a не равно b? (true)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">e</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="n">b</span> <span class="p">==</span> <span class="n">c</span> <span class="c1">// b равно с? (true)</span>
 </span></span></code></pre></div><p>Оператор заменяющий nil</p>
 <p><em>Примечание. nil - это абсолютное отсутствие значения, это НЕ 0 и не &ldquo;&rdquo;, а &lsquo;вакуум&rsquo;</em></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">val</span> <span class="p">=</span> <span class="s">&#34;Steve&#34;</span>
