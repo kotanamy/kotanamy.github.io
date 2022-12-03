@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/kotanamy.github.io\/posts\/xarchitecture_1\/"
-        },"genre": "posts","keywords": "Swift\/IOS, Tutorial, Architecture","wordcount":  459 ,
+        },"genre": "posts","keywords": "Swift\/IOS, Tutorial, Architecture","wordcount":  493 ,
         "url": "https:\/\/kotanamy.github.io\/posts\/xarchitecture_1\/","datePublished": "2022-06-28T00:00:00+00:00","dateModified": "2022-06-28T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kotanamy"},"author": {
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Road to IOS/Swift dev part 20</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kotanamy</a></span>&nbsp;<span class="post-category">включен в <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;459 слов&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;493 слов&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 минут&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -92,7 +92,7 @@
     <li><a href="#паттерны-проектирования">Паттерны проектирования</a>
       <ul>
         <li><a href="#singleton">Singleton</a></li>
-        <li><a href="#mvx">MV(X)</a></li>
+        <li><a href="#mvx-viper">MV(X), VIPER</a></li>
       </ul>
     </li>
   </ul>
@@ -124,19 +124,25 @@
 <p>По сути что мы хотим от архитектуры, чтобы нам в конкретный момент времени было понятно куда писать свой код, как должны взаимодействовать &ldquo;модули&rdquo; между собой, кто кого должен вызывать, кто от кого должен наследоваться, кто о ком должен знать и многое другое. Если обощить, то как писать без грязи и чтобы ты сам мог легко влезть в код через день\неделю\месяц\год.</p>
 <p>Что такое чистая архитектура - это рекомендации по организации системной архитектуры. Они были предложены Робертом С. Мартином (известным так же как Дядя Боб) и основаны на ряде прежних архитектурных построений, таких как гексагональная архитектура, луковая архитектура и т.д.</p>
 <p>Чистая архитектура, собственной персоны. Художник Ван Гог, XIX век н.э. (раннее, так сказать)</p>
-<p><figure><a class="lightgallery" href="____________________________" title="CleanArchitecture" data-thumbnail="____________________________" data-sub-html="<h2>Чистая архитектура</h2><p>CleanArchitecture</p>">
+<p><figure><a class="lightgallery" href="https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png" title="CleanArchitecture" data-thumbnail="https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png" data-sub-html="<h2>Чистая архитектура</h2><p>CleanArchitecture</p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="____________________________"
-            data-srcset="____________________________, ____________________________ 1.5x, ____________________________ 2x"
+            data-src="https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png"
+            data-srcset="https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png, https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png 1.5x, https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png 2x"
             data-sizes="auto"
-            alt="____________________________" />
+            alt="https://miro.medium.com/max/1400/0*5qiQ0O4N2JIfTCGp.png" />
     </a><figcaption class="image-caption">Чистая архитектура</figcaption>
     </figure></p>
 <p>Чтобы разобраться во всей этой каше, я предлагаю вам ознакомиться с <a href="habr.com/ru/post/269589/" rel="">переведенной статьей от Дядюшки Боба на хабре</a>.</p>
 <h2 id="паттерны-проектирования">Паттерны проектирования</h2>
-<p>Сюда общее разделение паттернов бахнуть надо</p>
+<p>Виды паттернов проектирования:</p>
+<ol>
+<li>Порождающие</li>
+<li>Структурные</li>
+<li>Поведенческие</li>
+</ol>
+<p><a href="https://github.com/ochococo/Design-Patterns-In-Swift?ysclid=lb7pesee64788054623" target="_blank" rel="noopener noreffer">Полезная ссылка</a></p>
 <h3 id="singleton">Singleton</h3>
 <p>В изучении патернов я бы начал с Singleton. Он нужен для того, чтобы быть уверенным что существует только 1 объект класса на весь жизненный цикл приложения.</p>
 <p>Продробнее о singleton можно прочитать в <a href="_______________________" rel="">этой статье с хабра</a>.</p>
@@ -146,9 +152,9 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="mvx">MV(X)</h3>
-<p>Ссылка: <a href="________________________" rel="">тык</a></p>
-<p>Ссылка2: <a href="_______________________" rel="">тык</a></p></div><div class="post-footer" id="post-footer">
+</span></span></code></pre></div><h3 id="mvx-viper">MV(X), VIPER</h3>
+<p>Здесь очень много можно разглагольствовать, в интернете куча материала по этому поводу, так что я не возьмусь освещать тему паттернов, только дам ссылку на то, с чего начать.</p>
+<p>Ссылка: <a href="https://habr.com/ru/company/badoo/blog/281162/" target="_blank" rel="noopener noreffer">4 основных паттерна для IOS разработчика</a></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
